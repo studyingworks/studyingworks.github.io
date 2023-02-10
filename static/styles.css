@@ -112,7 +112,7 @@ hr {
     box-shadow: black 0px -8px 15px;
     position:sticky;
     display:block;
-    background-image: url("https://studying.works/static/images/StudyingWorks_Banner_v2_dark.png");
+    background-image: url("/static/images/StudyingWorks_Banner_v2_dark.png");
     background-repeat: repeat, repeat;
     background-size: 800px;
     background-position: 0px, 100px;
