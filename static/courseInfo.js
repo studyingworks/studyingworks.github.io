@@ -120,6 +120,10 @@ class courses {
                 {
                     name: "Complex is Easier?",
                     url: "https://www.youtube.com/watch?v=XQveLfZQc6o"
+                },
+                {
+                    name: "Concavity and Inflection Points",
+                    url: "https://www.youtube.com/watch?v=EC5Aj_JaGq0"
                 }
             ]
         ],
