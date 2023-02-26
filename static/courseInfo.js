@@ -1,10 +1,10 @@
 // Course information (ADT: contains data, functions for course data)
 class courses {
     // Names of each course
-    static names = ["ap-chem", "ap-calc", "ap-lang", "apush", "ap-physics"];
-    static names_full = ["AP Chemistry", "AP Calculus", "AP English Language and Literature", "AP United States History (APUSH)", "AP Physics 1"];
+    static names = ["ap-chem", "ap-calc", "ap-lang", "apush", "ap-physics", "shorts"];
+    static names_full = ["AP Chemistry", "AP Calculus", "AP English Language and Literature", "AP United States History (APUSH)", "AP Physics 1", "#Shorts"];
     // Number of units in each course
-    static units = [1, 1, 1, 1, 1];
+    static units = [1, 1, 1, 1, 1, 1];
     // Info about each course's sections (videos, etc.)
     static sections = {
         "ap-chem": [ // Course name
@@ -160,6 +160,18 @@ class courses {
                 {
                     name: "Designing a Controlled Experiment",
                     url: "https://www.youtube.com/watch?v=y0LB47mcOM0"
+                }
+            ]
+        ],
+        "shorts": [
+            [
+                {
+                    name: "Solve ratio problems using the RAM Chart",
+                    url: "https://www.youtube.com/shorts/ubab_GXBAQs"
+                },
+                {
+                    name: "Sig Fig Rhapsody",
+                    url: "https://www.youtube.com/shorts/GxPOKSy3GGc"
                 }
             ]
         ]

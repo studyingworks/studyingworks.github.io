@@ -97,8 +97,8 @@ for(let i = 0; i < courses.names.length; i++) {
                         +'Lesson '+(t+1)+': '+thesesections[t].name+'<br>';
                     }
                     divtoload2.append(thissectionlk);
-                    // Create iframe for video at bottom of page
-                    if(thesesections[t].url != undefined) {
+                    // Create iframe for video at bottom of page (other than shorts)
+                    if(thesesections[t].url != undefined && !(thesesections[t].url.includes('shorts'))) {
                         iframeID = thesesections[t].url.split('?v=')[1]; // iframe ID is end of url; key 'urliframeID' is deprecated
                         var divtoload3 = document.getElementById('pg-'+thisunitlk.dataset.pgtoload+'-vids');
                         let thisiframe = document.createElement('iframe');
@@ -141,7 +141,7 @@ document.getElementById('search-bar').onchange = function() {
     }
     for(let i = 0; i < searchResults.length; i++) {
         // Create iframe for video at bottom of page
-        if(searchResults[i].url != undefined) {
+        if(searchResults[i].url != undefined && !(thesesections[t].url.includes('shorts'))) {
             iframeID = searchResults[i].url.split('?v=')[1]; // iframe ID is end of url; key 'urliframeID' is deprecated
             let thisiframe = document.createElement('iframe');
             thisiframe.width = '300';
