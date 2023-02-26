@@ -141,7 +141,7 @@ document.getElementById('search-bar').onchange = function() {
     }
     for(let i = 0; i < searchResults.length; i++) {
         // Create iframe for video at bottom of page
-        if(searchResults[i].url != undefined && !(thesesections[i].url.includes('shorts'))) {
+        if(searchResults[i].url != undefined && !(searchResults[i].url.includes('shorts'))) {
             iframeID = searchResults[i].url.split('?v=')[1]; // iframe ID is end of url; key 'urliframeID' is deprecated
             let thisiframe = document.createElement('iframe');
             thisiframe.width = '300';
