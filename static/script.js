@@ -136,7 +136,7 @@ for(let i = 0; i < courses.names.length; i++) {
 
 // Add featured videos to homepage
 for(let i = 0; i < courses.featured_videos.length; i++) {
-    iframeID = featured_videos[i].split('?v=')[1]; // iframe ID is end of url
+    iframeID = courses.featured_videos[i].split('?v=')[1]; // iframe ID is end of url
     var divtoload4 = document.getElementById('pg-home-vids');
     let thisiframe = createIframe(iframeID);
     divtoload4.append(thisiframe);
