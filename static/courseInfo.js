@@ -5,6 +5,11 @@ class courses {
     static names_full = ["AP Chemistry", "AP Calculus", "AP English Language and Literature", "AP United States History (APUSH)", "AP Physics 1", "#Shorts"];
     // Number of units in each course
     static units = [1, 1, 1, 1, 1, 1];
+    // Featured videos on the homepage
+    static featured_videos = [
+        "https://www.youtube.com/watch?v=cf33Vr6l7k0",
+        "https://www.youtube.com/watch?v=hX1FeAUu__w"
+    ]
     // Info about each course's sections (videos, etc.)
     static sections = {
         "ap-chem": [ // Course name
@@ -124,6 +129,10 @@ class courses {
                 {
                     name: "Concavity and Inflection Points",
                     url: "https://www.youtube.com/watch?v=EC5Aj_JaGq0"
+                },
+                {
+                    name: "Related Rates",
+                    url: "https://www.youtube.com/watch?v=hX1FeAUu__w"
                 }
             ]
         ],

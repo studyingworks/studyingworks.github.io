@@ -7,13 +7,14 @@ var existingPages = ["home", "searchres"];
 /*
 TO DO:
 - link back to home on the ptable page
-- practice problems? (randomly select based on those in courseInfo.js)
-- align videos
+- practice problems ? (randomly select based on those in courseInfo.js)
+- align videos better ?
+- move all iframe creation into createIframe()
 */
 
 // Functions
+// Hide existing pages
 function hideAllPages() {
-    // Hide existing pages
     for(let i = 0; i < existingPages.length; i++) {
         try {
             if(document.getElementById('pg-'+existingPages[i]).style.display != 'none') {
@@ -23,6 +24,17 @@ function hideAllPages() {
             // Pg does not exist
         }
     }
+}
+// Create and return a new iframe with the info
+function createIframe(inIframeID, inTitle = "YouTube video player") {
+    var thisiframe = document.createElement('iframe');
+    thisiframe.width = '300';
+    thisiframe.height = '200';
+    thisiframe.src = 'https://www.youtube.com/embed/'+iframeID;
+    thisiframe.title = inTitle;
+    thisiframe.frameborder = "0"; // previously did not have 'thisiframe.' before; same with allow =
+    thisiframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    return thisiframe;
 }
 
 // Add links / populate page divs
@@ -120,6 +132,14 @@ for(let i = 0; i < courses.names.length; i++) {
             // Course does not exist in list
         }
     }
+}
+
+// Add featured videos to homepage
+for(let i = 0; i < courses.featured_videos.length; i++) {
+    iframeID = featured_videos[i].split('?v=')[1]; // iframe ID is end of url
+    var divtoload4 = document.getElementById('pg-home-vids');
+    let thisiframe = createIframe(iframeID);
+    divtoload4.append(thisiframe);
 }
 
 // Home link
