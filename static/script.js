@@ -2,6 +2,7 @@
 var version = "0.0.4";
 console.log('STUDYING WORKS: v'+version);
 
+// Existing pages (other than class-specific ones)
 var existingPages = ["home", "searchres"];
 
 /*
@@ -30,10 +31,11 @@ function createIframe(inIframeID, inTitle = "YouTube video player") {
     var thisiframe = document.createElement('iframe');
     thisiframe.width = '300';
     thisiframe.height = '200';
-    thisiframe.src = 'https://www.youtube.com/embed/'+iframeID;
+    thisiframe.src = 'https://www.youtube.com/embed/'+inIframeID;
     thisiframe.title = inTitle;
     thisiframe.frameborder = "0"; // previously did not have 'thisiframe.' before; same with allow =
     thisiframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    thisiframe.allowFullscreen = true;
     return thisiframe;
 }
 
@@ -111,16 +113,9 @@ for(let i = 0; i < courses.names.length; i++) {
                     divtoload2.append(thissectionlk);
                     // Create iframe for video at bottom of page (other than shorts)
                     if(thesesections[t].url != undefined && !(thesesections[t].url.includes('shorts'))) {
-                        iframeID = thesesections[t].url.split('?v=')[1]; // iframe ID is end of url; key 'urliframeID' is deprecated
+                        var iframeID = thesesections[t].url.split('?v=')[1]; // iframe ID is end of url; key 'urliframeID' is deprecated
                         var divtoload3 = document.getElementById('pg-'+thisunitlk.dataset.pgtoload+'-vids');
-                        let thisiframe = document.createElement('iframe');
-                        thisiframe.width = '300';
-                        thisiframe.height = '200';
-                        thisiframe.src = 'https://www.youtube.com/embed/'+iframeID;
-                        thisiframe.title = 'YouTube video player';
-                        frameborder = "0";
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-                        thisiframe.allowFullscreen = true; // Is this the correct one?
+                        let thisiframe = createIframe(iframeID);
                         divtoload3.append(thisiframe);
                     }
                 } catch(err) {
@@ -136,9 +131,9 @@ for(let i = 0; i < courses.names.length; i++) {
 
 // Add featured videos to homepage
 for(let i = 0; i < courses.featured_videos.length; i++) {
-    iframeID = courses.featured_videos[i].split('?v=')[1]; // iframe ID is end of url
+    var iframeID = courses.featured_videos[i].split('?v=')[1]; // iframe ID is end of url
     var divtoload4 = document.getElementById('pg-home-vids');
-    let thisiframe = createIframe(iframeID);
+    var thisiframe = createIframe(iframeID);
     divtoload4.append(thisiframe);
 }
 
@@ -162,15 +157,8 @@ document.getElementById('search-bar').onchange = function() {
     for(let i = 0; i < searchResults.length; i++) {
         // Create iframe for video at bottom of page
         if(searchResults[i].url != undefined && !(searchResults[i].url.includes('shorts'))) {
-            iframeID = searchResults[i].url.split('?v=')[1]; // iframe ID is end of url; key 'urliframeID' is deprecated
-            let thisiframe = document.createElement('iframe');
-            thisiframe.width = '300';
-            thisiframe.height = '200';
-            thisiframe.src = 'https://www.youtube.com/embed/'+iframeID;
-            thisiframe.title = 'YouTube video player';
-            frameborder = "0";
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-            thisiframe.allowFullscreen = true; // Is this the correct one?
+            var iframeID = searchResults[i].url.split('?v=')[1]; // iframe ID is end of url; key 'urliframeID' is deprecated
+            var thisiframe = createIframe(iframeID);
             divtoload.append(thisiframe);
         }
     }

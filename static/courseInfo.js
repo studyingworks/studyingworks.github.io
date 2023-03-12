@@ -7,9 +7,10 @@ class courses {
     static units = [1, 1, 1, 1, 1, 1];
     // Featured videos on the homepage
     static featured_videos = [
-        "https://www.youtube.com/watch?v=cf33Vr6l7k0",
+        //"https://www.youtube.com/watch?v=cf33Vr6l7k0",
+        "https://www.youtube.com/watch?v=XQveLfZQc6o",
         "https://www.youtube.com/watch?v=hX1FeAUu__w"
-    ]
+    ];
     // Info about each course's sections (videos, etc.)
     static sections = {
         "ap-chem": [ // Course name
