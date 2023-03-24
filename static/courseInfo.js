@@ -9,7 +9,7 @@ class courses {
     static featured_videos = [
         //"https://www.youtube.com/watch?v=cf33Vr6l7k0",
         "https://www.youtube.com/watch?v=XQveLfZQc6o",
-        "https://www.youtube.com/watch?v=hX1FeAUu__w"
+        "https://www.youtube.com/watch?v=sgLjXnt9avo"
     ];
     // Info about each course's sections (videos, etc.)
     static sections = {
