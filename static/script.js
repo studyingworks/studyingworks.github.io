@@ -143,6 +143,12 @@ document.getElementById('lk-home').onclick = function() {
     document.getElementById('pg-home').style.display = 'block';
 }
 
+// Contact link
+document.getElementById('lk-contact').onclick = function() {
+    hideAllPages();
+    document.getElementById('pg-contact').style.display = 'block';
+}
+
 // Search bar
 document.getElementById('search-bar').onchange = function() {
     hideAllPages();
