@@ -66,6 +66,10 @@ class courses {
                 {
                     name: "Gas Laws",
                     url: "https://www.youtube.com/watch?v=cf33Vr6l7k0"
+                },
+                {
+                    name: "AP Chemistry FRQ Practice (Part 1)",
+                    url: "https://www.youtube.com/watch?v=Qax4Vd7jLSs"
                 }
             ]
         ],
@@ -182,6 +186,10 @@ class courses {
                 {
                     name: "Sig Fig Rhapsody",
                     url: "https://www.youtube.com/shorts/GxPOKSy3GGc"
+                },
+                {
+                    name: "Louie Zong - Asymptotic (StudyingWorks cover)",
+                    url: "https://www.youtube.com/shorts/gXrVHUq8iEc"
                 }
             ]
         ]
