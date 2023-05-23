@@ -190,6 +190,10 @@ class courses {
                 {
                     name: "Louie Zong - Asymptotic (StudyingWorks cover)",
                     url: "https://www.youtube.com/shorts/gXrVHUq8iEc"
+                },
+                {
+                    name: "Will Desmos be replaced by AI?",
+                    url: "https://www.youtube.com/shorts/uID7pJ_R0qI"
                 }
             ]
         ]
