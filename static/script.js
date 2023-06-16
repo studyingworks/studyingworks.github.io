@@ -1,5 +1,5 @@
 // Script
-var version = "0.0.4";
+var version = "0.0.5";
 console.log('STUDYING WORKS: v'+version);
 
 // Existing pages (other than class-specific ones)
@@ -19,7 +19,7 @@ function hideAllPages() {
     for(let i = 0; i < existingPages.length; i++) {
         try {
             if(document.getElementById('pg-'+existingPages[i]).style.display != 'none') {
-                document.getElementById('pg-'+existingPages[i]).style.display = 'none';
+				document.getElementById('pg-'+existingPages[i]).style.display = 'none';
             }
         } catch(err) {
             // Pg does not exist
