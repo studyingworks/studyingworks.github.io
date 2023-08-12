@@ -208,23 +208,23 @@ class courses {
     static searchSections(searchterm) {
         var res = [];
         // Check valid
-        if(searchterm.length < 1) {
+        if (searchterm.length < 1) {
             return [];
         }
         // Loop through
-        for(let i = 0; i < courses.names.length; i++) { // proper syntaxt for names?
+        for (let i = 0; i < courses.names.length; i++) { // proper syntaxt for names?
             var thisCourseSections = courses.sections[courses.names[i]][0];
-            for(let j = 0; j < Object.keys(thisCourseSections).length; j++) {
+            for (let j = 0; j < Object.keys(thisCourseSections).length; j++) {
                 var thisSection = thisCourseSections[Object.keys(thisCourseSections)[j]];
                 // Check if match (case insensitive)
                 var match = false;
-                if(thisSection.name.toLowerCase().includes(searchterm.toLowerCase())) {
+                if (thisSection.name.toLowerCase().includes(searchterm.toLowerCase())) {
                     match = true;
-                } else if(courses.names_full[i].toLowerCase().includes(searchterm.toLowerCase())) {
+                } else if (courses.names_full[i].toLowerCase().includes(searchterm.toLowerCase())) {
                     match = true;
                 }
                 // Add if match
-                if(match) {
+                if (match) {
                     thisSection["course"] = courses.names[i];
                     res.push(thisSection);
                 }

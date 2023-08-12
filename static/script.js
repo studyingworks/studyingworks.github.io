@@ -16,12 +16,12 @@ TO DO:
 // Functions
 // Hide existing pages
 function hideAllPages() {
-    for(let i = 0; i < existingPages.length; i++) {
+    for (let i = 0; i < existingPages.length; i++) {
         try {
-            if(document.getElementById('pg-'+existingPages[i]).style.display != 'none') {
+            if (document.getElementById('pg-'+existingPages[i]).style.display != 'none') {
 				document.getElementById('pg-'+existingPages[i]).style.display = 'none';
             }
-        } catch(err) {
+        } catch (err) {
             // Pg does not exist
         }
     }
@@ -40,13 +40,13 @@ function createIframe(inIframeID, inTitle = "YouTube video player") {
 }
 
 // Add links / populate page divs
-for(let i = 0; i < courses.names.length; i++) {
+for (let i = 0; i < courses.names.length; i++) {
     // Get ID
     var thislk = document.getElementById("lk-"+courses.names[i]);
     var thislkt = document.getElementById("lkt-"+courses.names[i]);
     // Add links
     var numUnitsInCourse = courses.units[i];
-    for(let j = 0; j < numUnitsInCourse; j++) {
+    for (let j = 0; j < numUnitsInCourse; j++) {
         // Link
         var content = "Content"; // (make only one click necessary?) (toadd) //(j+1) + "  ";
         let thisj = j;
@@ -57,7 +57,7 @@ for(let i = 0; i < courses.names.length; i++) {
         thisunitlk.id = "lk-"+courses.names[i]+"-"+(j+1);
         thisunitlk.innerText = content;
         thisunitlk.dataset.pgtoload = pgtoload;
-        if(numUnitsInCourse > 1) {
+        if (numUnitsInCourse > 1) {
             thislk.append(thisunitlk);
             thisunitlk.onclick = function() {
                 try {
@@ -68,7 +68,7 @@ for(let i = 0; i < courses.names.length; i++) {
                     divtoload.style.display = 'block';
                     console.log('Page loaded: pg-'+thisunitlk.dataset.pgtoload);
                 }
-                catch(err) {
+                catch (err) {
                     console.log('ERR on loading page: pg-'+thisunitlk.dataset.pgtoload);
                 }
             }
@@ -83,7 +83,7 @@ for(let i = 0; i < courses.names.length; i++) {
                     divtoload.style.display = 'block';
                     console.log('Page loaded: pg-'+pgtoload);
                 }
-                catch(err) {
+                catch (err) {
                     console.log('ERR on loading page: pg-'+pgtoload);
                 }
             }
@@ -91,7 +91,7 @@ for(let i = 0; i < courses.names.length; i++) {
         // Populate page div
         try {
             var thesesections = courses.sections[thiscoursename][thisj];
-            for(let t = 0; t < Object.keys(thesesections).length; t++) {
+            for (let t = 0; t < Object.keys(thesesections).length; t++) {
                 // Get link divider
                 try {
                     // Find this div
@@ -99,7 +99,7 @@ for(let i = 0; i < courses.names.length; i++) {
                     // Append
                     let thissectionlk = document.createElement('span');
                     let vidurl = 'none'; // https://www.youtube.com/channel/UC-9IyDlMjLaLFhD1VJpfBpg
-                    if(thesesections[t].url != undefined) {
+                    if (thesesections[t].url != undefined) {
                         vidurl = thesesections[t].url;
                         thissectionlk.innerHTML = ''
                         +'<a href="'+vidurl+'" class="link">'
@@ -112,25 +112,25 @@ for(let i = 0; i < courses.names.length; i++) {
                     }
                     divtoload2.append(thissectionlk);
                     // Create iframe for video at bottom of page (other than shorts)
-                    if(thesesections[t].url != undefined && !(thesesections[t].url.includes('shorts'))) {
+                    if (thesesections[t].url != undefined && !(thesesections[t].url.includes('shorts'))) {
                         var iframeID = thesesections[t].url.split('?v=')[1]; // iframe ID is end of url; key 'urliframeID' is deprecated
                         var divtoload3 = document.getElementById('pg-'+thisunitlk.dataset.pgtoload+'-vids');
                         let thisiframe = createIframe(iframeID);
                         divtoload3.append(thisiframe);
                     }
-                } catch(err) {
+                } catch (err) {
                     // Error populating
                     console.log('ERR on populating page: '+thiscoursename+'.'+thisj+'.'+t+' : '+err);
                 }
             }
-        } catch(err) {
+        } catch (err) {
             // Course does not exist in list
         }
     }
 }
 
 // Add featured videos to homepage
-for(let i = 0; i < courses.featured_videos.length; i++) {
+for (let i = 0; i < courses.featured_videos.length; i++) {
     var iframeID = courses.featured_videos[i].split('?v=')[1]; // iframe ID is end of url
     var divtoload4 = document.getElementById('pg-home-vids');
     var thisiframe = createIframe(iframeID);
@@ -157,12 +157,12 @@ document.getElementById('search-bar').onchange = function() {
     var searchResults = courses.searchSections(searchString);
     // Display results
     var divtoload = document.getElementById('pg-searchres-vids');
-    while(divtoload.firstChild) {
+    while (divtoload.firstChild) {
         divtoload.removeChild(divtoload.firstChild);
     }
-    for(let i = 0; i < searchResults.length; i++) {
+    for (let i = 0; i < searchResults.length; i++) {
         // Create iframe for video at bottom of page
-        if(searchResults[i].url != undefined && !(searchResults[i].url.includes('shorts'))) {
+        if (searchResults[i].url != undefined && !(searchResults[i].url.includes('shorts'))) {
             var iframeID = searchResults[i].url.split('?v=')[1]; // iframe ID is end of url; key 'urliframeID' is deprecated
             var thisiframe = createIframe(iframeID);
             divtoload.append(thisiframe);
