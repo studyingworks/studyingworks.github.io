@@ -1,8 +1,17 @@
 // Course information (ADT: contains data, functions for course data)
 class courses {
     // Names of each course
-    static names = ["ap-chem", "ap-calc", "ap-lang", "apush", "ap-physics", "shorts"];
-    static names_full = ["AP Chemistry", "AP Calculus", "AP English Language and Literature", "AP United States History (APUSH)", "AP Physics 1", "#Shorts"];
+    static names = [
+        "ap-chem", "ap-calc", "ap-lang", "apush", "ap-physics", "shorts"
+    ];
+    static names_full = [
+        "AP Chemistry",
+        "AP Calculus AB/BC",
+        "AP English Language/Literature and Composition",
+        "AP United States History/Government/Macroeconomics",
+        "AP Physics 1/2",
+        "#Shorts"
+    ];
     // Number of units in each course
     static units = [1, 1, 1, 1, 1, 1];
     // Featured videos on the homepage
