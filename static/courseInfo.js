@@ -194,6 +194,10 @@ class courses {
                 {
                     name: "Will Desmos be replaced by AI?",
                     url: "https://www.youtube.com/shorts/uID7pJ_R0qI"
+                },
+                {
+                    name: "Tierlisting AP Classes by Difficulty",
+                    url: "https://www.youtube.com/shorts/Le12qW4ZaOo"
                 }
             ]
         ]
