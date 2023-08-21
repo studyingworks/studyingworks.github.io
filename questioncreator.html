@@ -63,6 +63,11 @@
         }
         return outStr;
     }
+    function decrLitOut(inStr) {
+        if (inStr.length == 0) return;
+        if (inStr.charAt(0) == '`') console.log(decryptSimple(inStr.substr(3, inStr.length - 6)));
+        else console.log(decryptSimple(inStr));
+    }
     // On click control buttons
     // Submit and start new question
     document.getElementById('in_submit').addEventListener('click', function() {
@@ -89,13 +94,13 @@
         totalQuestions += encryptSimple(
             '{\n'
             + '    q: "' + document.getElementById('in_title').value + '",\n'
-            + '    as: ["' + document.getElementById('in_1').value
+            + '    as: [["' + document.getElementById('in_1').value
             + '", "' + document.getElementById('in_2').value
             + '", "' + document.getElementById('in_3').value
             + '", "' + document.getElementById('in_4').value
             + '"],\n'
             + '    a_correct: ' + document.getElementById('in_correct').value
-            + '\n},'
+            + '\n},\n'
         );
         totalQuestionsCount++;
         document.getElementById('disp_qnum').innerText = totalQuestionsCount;
