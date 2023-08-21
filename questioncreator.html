@@ -46,7 +46,7 @@
 </body>
 <script>
     // Variables
-    let totalQuestions = '';
+    let totalQuestions = '```';
     let totalQuestionsCount = 0;
     // Utility functions
     function encryptSimple(inStr) {
@@ -115,7 +115,7 @@
     // Copy code
     document.getElementById('in_copy').addEventListener('click', function() {
         // Copy the encrypted results
-        navigator.clipboard.writeText(totalQuestions);
+        navigator.clipboard.writeText(totalQuestions + '```');
         document.getElementById('disp_copystatus').innerText = 'Copied';
     });
     // First setup and hints
