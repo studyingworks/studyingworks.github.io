@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyingWorks Question Creator</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="pagediv">
+        <h2>StudyingWorks Question Creator (in development)</h2>
+        <span>
+            Got an idea for a practice question for StudyingWorks?
+            <br>Create your question here, then send the question code to StudyingWorks
+            <br>and the question may be implemented into the website!
+            <br>Please only provide your own original questions, and not ones affected by copyright,
+            <br>such as those belonging to the AP CollegeBoard.
+            <br><br>Please use the TAB key to move between input boxes/buttons.
+            <br>When you finish creating your question, tab to the "Submit and start new question" button and press enter.
+            <br>The question will be submitted.
+            <br><br>When you finish creating all your questions, click the "Copy all code to clipboard" button.
+            <br>Send the contents of your clipboard to a website developer, who will implement your question.
+        </span>
+        <br>
+        <br>
+        <hr>
+        <b>Title:</b> <input id="in_title" type="text" placeholder="TITLE">
+        <span id="disp_hint1">✨Hint: press TAB after inputting the title✨</span>
+        <hr>
+        <b>Option #1:</b> <input id="in_1" type="text" placeholder="OPTION 1">
+        <span id="disp_hint2" style="display:none;">✨Hint: press TAB after inputting this option✨</span>
+        <br><b>Option #2:</b> <input id="in_2" type="text" placeholder="OPTION 2">
+        <br><b>Option #3:</b> <input id="in_3" type="text" placeholder="OPTION 3">
+        <br><b>Option #4:</b> <input id="in_4" type="text" placeholder="OPTION 4">
+        <hr>
+        <b>Correct Option #:</b> <input id="in_correct" type="text" placeholder="CORRECT OPTION # (1-4)">
+        <span id="disp_hint3" style="display:none;">✨Hint: enter a number 1-4, then press tab✨</span>
+        <hr>
+        <button id="in_submit">Submit and start new question</button>
+        <span id="disp_hint4" style="display:none;">✨Hint: press enter to submit your question and start anew✨</span>
+        <hr>
+        <button id="in_copy"><span id="disp_copystatus">Copy</span> all code to clipboard (<span id="disp_qnum">0</span> questions added)</button>
+        <span id="copyfield" style="display:none;"></span>
+    </div>
+</body>
+<script>
+    // Variables
+    let totalQuestions = '';
+    let totalQuestionsCount = 0;
+    // Utility functions
+    function encryptSimple(inStr) {
+        let outStr = '';
+        for (let i = 0; i < inStr.length; i++) {
+            outStr += String.fromCharCode(inStr.charCodeAt(i) + 1);
+        }
+        return outStr;
+    }
+    function decryptSimple(inStr) {
+        let outStr = '';
+        for (let i = 0; i < inStr.length; i++) {
+            outStr += String.fromCharCode(inStr.charCodeAt(i) - 1);
+        }
+        return outStr;
+    }
+    // On click control buttons
+    // Submit and start new question
+    document.getElementById('in_submit').addEventListener('click', function() {
+        // Check validity
+        try {
+            let tryVal = parseInt(document.getElementById('in_correct').value);
+            if (tryVal == NaN || !isFinite(tryVal) || tryVal < 1 || tryVal > 4) {
+                document.getElementById('in_submit').innerText = 'Correct option # must be between 1 and 4';
+                document.getElementById('in_correct').focus();
+                document.getElementById('disp_hint4').style.display = 'none';
+                document.getElementById('disp_hint3').style.display = 'inline';
+                return;
+            }
+        } catch(err) {
+            document.getElementById('in_submit').innerText = 'Correct option # must be a number between 1 and 4';
+            document.getElementById('in_correct').focus();
+            document.getElementById('disp_hint4').style.display = 'none';
+            document.getElementById('disp_hint3').style.display = 'inline';
+            return;
+        }
+        // Reset text if necessary
+        document.getElementById('in_submit').innerText = 'Submit and start new question';
+        // Submit (add to totalQuestions)
+        totalQuestions += encryptSimple(
+            '{\n'
+            + '    q: "' + document.getElementById('in_title').value + '",\n'
+            + '    as: ["' + document.getElementById('in_1').value
+            + '", "' + document.getElementById('in_2').value
+            + '", "' + document.getElementById('in_3').value
+            + '", "' + document.getElementById('in_4').value
+            + '"],\n'
+            + '    a_correct: ' + document.getElementById('in_correct').value
+            + '\n},'
+        );
+        totalQuestionsCount++;
+        document.getElementById('disp_qnum').innerText = totalQuestionsCount;
+        document.getElementById('disp_copystatus').innerText = 'Copy';
+        // Clear form
+        document.getElementById('in_title').value = '';
+        document.getElementById('in_1').value = '';
+        document.getElementById('in_2').value = '';
+        document.getElementById('in_3').value = '';
+        document.getElementById('in_4').value = '';
+        document.getElementById('in_correct').value = '';
+        // Start at the top and reset hints
+        document.getElementById('in_title').focus();
+        document.getElementById('disp_hint4').style.display = 'none';
+        document.getElementById('disp_hint1').style.display = 'inline';
+    });
+    // Copy code
+    document.getElementById('in_copy').addEventListener('click', function() {
+        // Copy the encrypted results
+        navigator.clipboard.writeText(totalQuestions);
+        document.getElementById('disp_copystatus').innerText = 'Copied';
+    });
+    // First setup and hints
+    document.getElementById('in_title').focus();
+    document.getElementById('in_title').addEventListener('change', function() {
+        document.getElementById('disp_hint1').style.display = 'none';
+        document.getElementById('disp_hint2').style.display = 'inline';
+    });
+    document.getElementById('in_1').addEventListener('change', function() {
+        document.getElementById('disp_hint2').style.display = 'none';
+    });
+    document.getElementById('in_4').addEventListener('change', function() {
+        document.getElementById('disp_hint3').style.display = 'inline';
+    });
+    document.getElementById('in_correct').addEventListener('change', function() {
+        document.getElementById('disp_hint3').style.display = 'none';
+        document.getElementById('disp_hint4').style.display = 'inline';
+    });
+</script>
+</html>

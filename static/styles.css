@@ -205,3 +205,21 @@ a:active {
     padding-left:0px;
     padding-right:0px;
 }
+
+/* Button */
+button {
+    color: white;
+    font-weight: bold;
+    background-color: #46aea3;
+    padding: 8px;
+    border-style: none;
+}
+button:hover {
+    background-color: #2d7d82;
+}
+button:focus {
+    background-color: #2d7d82;
+}
+button:active {
+    background-color: #1d495e
+}
