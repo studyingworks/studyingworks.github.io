@@ -7,10 +7,11 @@ var existingPages = ["home", "searchres"];
 
 /*
 TO DO:
-- link back to home on the ptable page
-- practice problems ? (randomly select based on those in courseInfo.js)
-- align videos better ?
-- move all iframe creation into createIframe()
+- Link back to home on the ptable page
+- Finish practice/question ui (randomly select based on those in courseInfo.js)
+- Align videos better?
+- Move all iframe creation into createIframe()
+- Make links open in new tab
 */
 
 // Functions
@@ -99,7 +100,9 @@ for (let i = 0; i < courses.names.length; i++) {
                     // Append
                     let thissectionlk = document.createElement('span');
                     let vidurl = 'none'; // https://www.youtube.com/channel/UC-9IyDlMjLaLFhD1VJpfBpg
+                    // Add link, if possible
                     if (thesesections[t].url != undefined) {
+                        // Add link
                         vidurl = thesesections[t].url;
                         thissectionlk.innerHTML = ''
                         +'<a href="'+vidurl+'" class="link">'
@@ -111,6 +114,14 @@ for (let i = 0; i < courses.names.length; i++) {
                         +'Lesson '+(t+1)+': '+thesesections[t].name+'<br>';
                     }
                     divtoload2.append(thissectionlk);
+                    // Add practice problems, if possible
+                    if ('practiceProblems' in thesesections[t]) {
+                        // Add practice problems under link
+                        thissectionlk.innerHTML += ''
+                        +'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+                        +'<a class="link" onclick="spawnPracticeLightbox(\''+i+'\', '+t+');">'
+                        +'Try Practice Problems for this lesson</a><br>';
+                    }
                     // Create iframe for video at bottom of page (other than shorts)
                     if (thesesections[t].url != undefined && !(thesesections[t].url.includes('shorts'))) {
                         var iframeID = thesesections[t].url.split('?v=')[1]; // iframe ID is end of url; key 'urliframeID' is deprecated
@@ -148,6 +159,20 @@ document.getElementById('lk-contact').onclick = function() {
     hideAllPages();
     document.getElementById('pg-contact').style.display = 'block';
 }
+
+// Practice lightbox functions
+function spawnPracticeLightbox(inCourseNum, inSectionIndex) {
+    // Set the lightbox values
+    document.getElementById('plb_class').innerText = courses.names_colloquial[inCourseNum];
+    document.getElementById('plb_lesson').innerText = '' + (inSectionIndex + 1);
+    // Show the lightbox
+    document.getElementById('practiceLightboxBg').style.display = 'block';
+}
+
+// Close lightbox functions
+document.getElementById('plb_exit').addEventListener('click', function() {
+    document.getElementById('practiceLightboxBg').style.display = 'none';
+})
 
 // Search bar
 document.getElementById('search-bar').onchange = function() {

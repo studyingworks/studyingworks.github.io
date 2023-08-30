@@ -4,6 +4,14 @@ class courses {
     static names = [
         "ap-chem", "ap-calc", "ap-lang", "apush", "ap-physics", "shorts"
     ];
+    static names_colloquial = [
+        "AP Chem",
+        "AP Calc",
+        "AP Lang/Lit",
+        "APUSH/Gov/Econ",
+        "AP Physics",
+        "#Shorts"
+    ]
     static names_full = [
         "AP Chemistry",
         "AP Calculus AB/BC",
@@ -110,7 +118,14 @@ class courses {
                 },
                 {
                     name: "The Intermediate Value Theorem",
-                    url: "https://www.youtube.com/watch?v=vwMJ9i_FE6w"
+                    url: "https://www.youtube.com/watch?v=vwMJ9i_FE6w",
+                    practiceProblems: [
+                        {
+                            q: "What is most specifically required to use the IVT on f(x) on (a, b)?",
+                            as: ["f is continuous on (a, b)", "f is differentiable on (a, b)", "f is defined for (a, b)", "f is defined"],
+                            a_correct: 1
+                        }
+                    ]
                 },
                 {
                     name: "Differentiation Rules Part 2",
