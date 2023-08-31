@@ -105,7 +105,7 @@ for (let i = 0; i < courses.names.length; i++) {
                         // Add link
                         vidurl = thesesections[t].url;
                         thissectionlk.innerHTML = ''
-                        +'<a href="'+vidurl+'" class="link">'
+                        +'<a href="'+vidurl+'" class="link" target="_blank">'
                         +'<img src="static/images/icon-yt.svg" width="12px" height="12px">'
                         +'Lesson '+(t+1)+': '+thesesections[t].name+'</a><br>'; // +'Section 1.'+(t+1)+': '+thesesections[t].name+'</a><br>';
                     }
