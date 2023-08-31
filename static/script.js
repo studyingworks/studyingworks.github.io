@@ -1,9 +1,9 @@
 // Script
-var version = "0.0.5";
+var version = "0.0.6";
 console.log('STUDYING WORKS: v'+version);
 
 // Existing pages (other than class-specific ones)
-var existingPages = ["home", "searchres"];
+var existingPages = ["home", "searchres", "contact"];
 
 /*
 TO DO:
@@ -60,7 +60,7 @@ for (let i = 0; i < courses.names.length; i++) {
         thisunitlk.dataset.pgtoload = pgtoload;
         if (numUnitsInCourse > 1) {
             thislk.append(thisunitlk);
-            thisunitlk.onclick = function() {
+            thisunitlk.addEventListener('click', function() {
                 try {
                     // Hide existing pages
                     hideAllPages();
@@ -72,10 +72,10 @@ for (let i = 0; i < courses.names.length; i++) {
                 catch (err) {
                     console.log('ERR on loading page: pg-'+thisunitlk.dataset.pgtoload);
                 }
-            }
+            });
         } else {
             thislkt.dataset.pgtoload = pgtoload;
-            thislkt.onclick = function() {
+            thislkt.addEventListener('click', function() {
                 try {
                     // Hide existing pages
                     hideAllPages();
@@ -87,7 +87,7 @@ for (let i = 0; i < courses.names.length; i++) {
                 catch (err) {
                     console.log('ERR on loading page: pg-'+pgtoload);
                 }
-            }
+            });
         }
         // Populate page div
         try {
@@ -149,16 +149,16 @@ for (let i = 0; i < courses.featured_videos.length; i++) {
 }
 
 // Home link
-document.getElementById('lk-home').onclick = function() {
+document.getElementById('lk-home').addEventListener('click', function() {
     hideAllPages();
     document.getElementById('pg-home').style.display = 'block';
-}
+});
 
 // Contact link
-document.getElementById('lk-contact').onclick = function() {
+document.getElementById('lk-contact').addEventListener('click', function() {
     hideAllPages();
     document.getElementById('pg-contact').style.display = 'block';
-}
+});
 
 // Practice lightbox functions
 function spawnPracticeLightbox(inCourseNum, inSectionIndex) {
