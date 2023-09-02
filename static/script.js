@@ -1,4 +1,4 @@
-// Script
+// Script for StudyingWorks
 var version = "0.0.6";
 console.log('STUDYING WORKS: v'+version);
 
@@ -11,12 +11,12 @@ TO DO:
 - Finish practice/question ui (randomly select based on those in courseInfo.js)
 - Align videos better?
 - Move all iframe creation into createIframe()
-- Make links open in new tab
 */
 
 // Functions
 // Hide existing pages
 function hideAllPages() {
+    // Hide main pages
     for (let i = 0; i < existingPages.length; i++) {
         try {
             if (document.getElementById('pg-'+existingPages[i]).style.display != 'none') {
@@ -26,6 +26,8 @@ function hideAllPages() {
             // Pg does not exist
         }
     }
+    // Hide lightbox
+    closePracticeLightbox();
 }
 // Create and return a new iframe with the info
 function createIframe(inIframeID, inTitle = "YouTube video player") {
@@ -58,7 +60,7 @@ for (let i = 0; i < courses.names.length; i++) {
         thisunitlk.id = "lk-"+courses.names[i]+"-"+(j+1);
         thisunitlk.innerText = content;
         thisunitlk.dataset.pgtoload = pgtoload;
-        if (numUnitsInCourse > 1) {
+        if (numUnitsInCourse > 1) { // Such a unit count is currently deprecated
             thislk.append(thisunitlk);
             thisunitlk.addEventListener('click', function() {
                 try {
@@ -119,7 +121,7 @@ for (let i = 0; i < courses.names.length; i++) {
                         // Add practice problems under link
                         thissectionlk.innerHTML += ''
                         +'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
-                        +'<a class="link" onclick="spawnPracticeLightbox(\''+i+'\', '+t+');">'
+                        +'<a class="link" onclick="openPracticeLightbox('+i+', '+t+');">'
                         +'Try Practice Problems for this lesson</a><br>';
                     }
                     // Create iframe for video at bottom of page (other than shorts)
@@ -159,20 +161,10 @@ document.getElementById('lk-contact').addEventListener('click', function() {
     hideAllPages();
     document.getElementById('pg-contact').style.display = 'block';
 });
-
-// Practice lightbox functions
-function spawnPracticeLightbox(inCourseNum, inSectionIndex) {
-    // Set the lightbox values
-    document.getElementById('plb_class').innerText = courses.names_colloquial[inCourseNum];
-    document.getElementById('plb_lesson').innerText = '' + (inSectionIndex + 1);
-    // Show the lightbox
-    document.getElementById('practiceLightboxBg').style.display = 'block';
-}
-
-// Close lightbox functions
-document.getElementById('plb_exit').addEventListener('click', function() {
-    document.getElementById('practiceLightboxBg').style.display = 'none';
-})
+document.getElementById('lk-contact2').addEventListener('click', function() {
+    hideAllPages();
+    document.getElementById('pg-contact').style.display = 'block';
+});
 
 // Search bar
 document.getElementById('search-bar').onchange = function() {

@@ -38,12 +38,12 @@ class courses {
                         {
                             q: "How many molecules are in one mol?", // Question
                             as: ["6.02", "0.08206", "6.02x10^23", "4.184"], // Answers
-                            a_correct: 2 // Correct answer index
+                            a_correct: 3 // Correct answer NUMBER (1-4)
                         },
                         {
                             q: "Using your ptable, what is the molar mass of Lithium?",
                             as: ["3", "6.94g/mol", "13.88g/mol", "Li"],
-                            a_correct: 1
+                            a_correct: 2
                         }
                     ]
                 },*/
@@ -82,7 +82,14 @@ class courses {
                 },
                 {
                     name: "Gas Laws",
-                    url: "https://www.youtube.com/watch?v=cf33Vr6l7k0"
+                    url: "https://www.youtube.com/watch?v=cf33Vr6l7k0",
+                    practiceProblems: [
+                        {
+                            q: "As temperature increases, what happens to pressure?",
+                            as: ["P decreases", "P remains the same", "P increases", "Cannot be determined"],
+                            a_correct: 3
+                        }
+                    ]
                 },
                 {
                     name: "AP Chemistry FRQ Practice (Part 1)",
@@ -123,6 +130,16 @@ class courses {
                         {
                             q: "What is most specifically required to use the IVT on f(x) on (a, b)?",
                             as: ["f is continuous on (a, b)", "f is differentiable on (a, b)", "f is defined for (a, b)", "f is defined"],
+                            a_correct: 1
+                        },
+                        {
+                            q: "f(x) is continuous on (a, b). f(a) = f(b) = 7. Can the IVT guarantee a value c on (a, b) such that f(c) = 7?",
+                            as: ["Yes, because f(a) <= 7 <= f(b)", "Yes, because f(a) = f(b)", "No, because f(a) = f(b)", "No, because f(x) is not differentiable"],
+                            a_correct: 3
+                        },
+                        {
+                            q: "Which of the following is always a true statement?",
+                            as: ["Differentiability implies continuity", "Continuity implies differentiability", "For f to be a function, it must be continuous", "If f's derivative is continuous, then f is twice-differentiable"],
                             a_correct: 1
                         }
                     ]
