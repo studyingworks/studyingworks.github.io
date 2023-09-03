@@ -146,7 +146,14 @@ class courses {
                 },
                 {
                     name: "Differentiation Rules Part 2",
-                    url: "https://www.youtube.com/watch?v=5WuGXaFrQ1A"
+                    url: "https://www.youtube.com/watch?v=5WuGXaFrQ1A",
+                    practiceProblems: [
+                        {
+                            q: "f(x) = 2g(x)\ng(x) = 3x^2\n\nWhat is the value of f'(2)?",
+                            as: ["f'(4) = 3", "f'(4) = 6", "f'(4) = 12", "f'(4) = 24"],
+                            a_correct: 4
+                        },
+                    ]
                 },
                 {
                     name: "How to Use the Chain Rule",

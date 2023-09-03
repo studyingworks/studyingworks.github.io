@@ -12,21 +12,22 @@
         <h2>StudyingWorks Question Creator (in development)</h2>
         <span>
             Got an idea for a practice question for StudyingWorks?
-            <br>Create your question here, then send the question code to StudyingWorks
+            <br><b>Create your question here</b>, then send the question code to StudyingWorks
             <br>and the question may be implemented into the website!
-            <br>Please only provide your own original questions, and not ones affected by copyright,
-            <br>such as those belonging to the AP CollegeBoard.
-            <br><br>Please use the TAB key to move between input boxes/buttons.
+        </span>
+        <br><a class="link" id="in_howtouse"><b>How to Use</b></a>
+        <div id="disp_help" style="padding-left:20px; display:none;">
+            <br>Please use the [tab] key to move between input boxes/buttons.
             <br>When you finish creating your question, tab to the "Submit and start new question" button and press enter.
             <br>The question will be submitted.
             <br><br>When you finish creating all your questions, click the "Copy all code to clipboard" button.
             <br>Send the contents of your clipboard to a website developer, who will implement your question.
-        </span>
-        <br>
+        </div>
         <br>
         <hr>
-        <b>Title:</b> <input id="in_title" type="text" placeholder="TITLE">
-        <span id="disp_hint1">✨Hint: press TAB after inputting the title✨</span>
+        <b>Question:</b> <!-- <input id="in_title" type="text" placeholder="QUESTION"> -->
+        <br><textarea id="in_title" placeholder="QUESTION"></textarea>
+        <span id="disp_hint1">✨Hint: press TAB after inputting the question✨</span>
         <hr>
         <b>Option #1:</b> <input id="in_1" type="text" placeholder="OPTION 1">
         <span id="disp_hint2" style="display:none;">✨Hint: press TAB after inputting this option✨</span>
@@ -42,6 +43,8 @@
         <hr>
         <button id="in_copy"><span id="disp_copystatus">Copy</span> all code to clipboard (<span id="disp_qnum">0</span> questions added)</button>
         <span id="copyfield" style="display:none;"></span>
+        <br><br>Disclaimer: please only provide your own original questions, and not ones affected by copyright,
+        <br>such as those belonging to the College Board.
     </div>
 </body>
 <script>
@@ -93,7 +96,7 @@
         // Submit (add to totalQuestions)
         totalQuestions += encryptSimple(
             '{\n'
-            + '    q: "' + document.getElementById('in_title').value + '",\n'
+            + '    q: "' + document.getElementById('in_title').value.replace(/\n/g, '\\n') + '",\n'
             + '    as: [["' + document.getElementById('in_1').value
             + '", "' + document.getElementById('in_2').value
             + '", "' + document.getElementById('in_3').value
@@ -138,6 +141,13 @@
     document.getElementById('in_correct').addEventListener('change', function() {
         document.getElementById('disp_hint3').style.display = 'none';
         document.getElementById('disp_hint4').style.display = 'inline';
+    });
+    document.getElementById('in_howtouse').addEventListener('click', function() {
+        if (document.getElementById('disp_help').style.display == 'none') {
+            document.getElementById('disp_help').style.display = 'block';
+        } else {
+            document.getElementById('disp_help').style.display = 'none';
+        }
     });
 </script>
 </html>

@@ -1,5 +1,5 @@
 // Script for StudyingWorks
-var version = "0.0.6";
+var version = "0.0.7";
 console.log('STUDYING WORKS: v'+version);
 
 // Existing pages (other than class-specific ones)
@@ -7,10 +7,20 @@ var existingPages = ["home", "searchres", "contact"];
 
 /*
 TO DO:
-- Link back to home on the ptable page
-- Finish practice/question ui (randomly select based on those in courseInfo.js)
-- Align videos better?
-- Move all iframe creation into createIframe()
+General
+    - Feat: link back to home on the ptable page
+    - Align videos better?
+    - Refactor: move all iframe creation into createIframe()
+Practice Lightbox
+    - Feat: store question states for lightbox session
+    - Feat: correct/incorrect counts and percentages
+    - Feat: question explanations (optional; compatibility with creator)
+    - Frontend: layout and styles
+Question Creator
+    - Feat: question explanations (optional; compatibility with lightbox)
+    - Feat: display all created questions in a list to the side
+    - Feat: allow editing or removing questions
+    - Fix: glitching tab-hint boxes
 */
 
 // Functions
