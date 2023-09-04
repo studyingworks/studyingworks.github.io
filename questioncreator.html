@@ -21,7 +21,7 @@
             <br>When you finish creating your question, tab to the "Submit and start new question" button and press enter.
             <br>The question will be submitted.
             <br><br>When you finish creating all your questions, click the "Copy all code to clipboard" button.
-            <br>Send the contents of your clipboard to a website developer, who will implement your question.
+            <br>Send the contents of your clipboard to a website developer, who will implement your questions.
         </div>
         <br>
         <hr>
@@ -71,6 +71,13 @@
         if (inStr.charAt(0) == '`') console.log(decryptSimple(inStr.substr(3, inStr.length - 6)));
         else console.log(decryptSimple(inStr));
     }
+    const tabHintCount = 4;
+    function displayTabHint(inTabHintNum) {
+        for (let i = 1; i <= tabHintCount; i++) {
+            if (i == inTabHintNum) document.getElementById('disp_hint' + i).style.display = 'inline';
+            else document.getElementById('disp_hint' + i).style.display = 'none';
+        }
+    }
     // On click control buttons
     // Submit and start new question
     document.getElementById('in_submit').addEventListener('click', function() {
@@ -80,15 +87,13 @@
             if (tryVal == NaN || !isFinite(tryVal) || tryVal < 1 || tryVal > 4) {
                 document.getElementById('in_submit').innerText = 'Correct option # must be between 1 and 4';
                 document.getElementById('in_correct').focus();
-                document.getElementById('disp_hint4').style.display = 'none';
-                document.getElementById('disp_hint3').style.display = 'inline';
+                displayTabHint(3);
                 return;
             }
         } catch(err) {
             document.getElementById('in_submit').innerText = 'Correct option # must be a number between 1 and 4';
             document.getElementById('in_correct').focus();
-            document.getElementById('disp_hint4').style.display = 'none';
-            document.getElementById('disp_hint3').style.display = 'inline';
+            displayTabHint(3);
             return;
         }
         // Reset text if necessary
@@ -117,8 +122,7 @@
         document.getElementById('in_correct').value = '';
         // Start at the top and reset hints
         document.getElementById('in_title').focus();
-        document.getElementById('disp_hint4').style.display = 'none';
-        document.getElementById('disp_hint1').style.display = 'inline';
+        displayTabHint(1);
     });
     // Copy code
     document.getElementById('in_copy').addEventListener('click', function() {
@@ -129,18 +133,16 @@
     // First setup and hints
     document.getElementById('in_title').focus();
     document.getElementById('in_title').addEventListener('change', function() {
-        document.getElementById('disp_hint1').style.display = 'none';
-        document.getElementById('disp_hint2').style.display = 'inline';
+        displayTabHint(2);
     });
     document.getElementById('in_1').addEventListener('change', function() {
-        document.getElementById('disp_hint2').style.display = 'none';
+        displayTabHint(-1);
     });
     document.getElementById('in_4').addEventListener('change', function() {
-        document.getElementById('disp_hint3').style.display = 'inline';
+        displayTabHint(3);
     });
     document.getElementById('in_correct').addEventListener('change', function() {
-        document.getElementById('disp_hint3').style.display = 'none';
-        document.getElementById('disp_hint4').style.display = 'inline';
+        displayTabHint(4);
     });
     document.getElementById('in_howtouse').addEventListener('click', function() {
         if (document.getElementById('disp_help').style.display == 'none') {

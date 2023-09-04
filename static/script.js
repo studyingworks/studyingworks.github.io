@@ -20,7 +20,6 @@ Question Creator
     - Feat: question explanations (optional; compatibility with lightbox)
     - Feat: display all created questions in a list to the side
     - Feat: allow editing or removing questions
-    - Fix: glitching tab-hint boxes
 */
 
 // Functions
