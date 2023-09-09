@@ -150,7 +150,7 @@ class courses {
                     practiceProblems: [
                         {
                             q: "f(x) = 2g(x)\ng(x) = 3x^2\n\nWhat is the value of f'(2)?",
-                            as: ["f'(4) = 3", "f'(4) = 6", "f'(4) = 12", "f'(4) = 24"],
+                            as: ["f'(2) = 3", "f'(2) = 6", "f'(2) = 12", "f'(2) = 24"],
                             a_correct: 4
                         },
                     ]
