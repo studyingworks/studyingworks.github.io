@@ -38,12 +38,14 @@ class courses {
                         {
                             q: "How many molecules are in one mol?", // Question
                             as: ["6.02", "0.08206", "6.02x10^23", "4.184"], // Answers
-                            a_correct: 3 // Correct answer NUMBER (1-4)
+                            a_correct: 3, // Correct answer NUMBER (1-4)
+                            expl: "Avogadro's Number" // Correct answer EXPLANATION
                         },
                         {
                             q: "Using your ptable, what is the molar mass of Lithium?",
                             as: ["3", "6.94g/mol", "13.88g/mol", "Li"],
-                            a_correct: 2
+                            a_correct: 2,
+                            expl: "Study ptable skills"
                         }
                     ]
                 },*/
@@ -85,9 +87,10 @@ class courses {
                     url: "https://www.youtube.com/watch?v=cf33Vr6l7k0",
                     practiceProblems: [
                         {
-                            q: "As temperature increases, what happens to pressure?",
+                            q: "As average kinetic energy increases, what happens to pressure?",
                             as: ["P decreases", "P remains the same", "P increases", "Cannot be determined"],
-                            a_correct: 3
+                            a_correct: 3,
+                            expl: "Conceptually, higher temperature means particles collide with the walls more frequently and with greater energy\nMathematically, P = nRT/V, so as V increases, P increases"
                         }
                     ]
                 },
@@ -130,17 +133,20 @@ class courses {
                         {
                             q: "What is most specifically required to use the IVT on f(x) on (a, b)?",
                             as: ["f is continuous on (a, b)", "f is differentiable on (a, b)", "f is defined for (a, b)", "f is defined"],
-                            a_correct: 1
+                            a_correct: 1,
+                            expl: ""
                         },
                         {
                             q: "f(x) is continuous on (a, b). f(a) = f(b) = 7. Can the IVT guarantee a value c on (a, b) such that f(c) = 7?",
                             as: ["Yes, because f(a) <= 7 <= f(b)", "Yes, because f(a) = f(b)", "No, because f(a) = f(b)", "No, because f(x) is not differentiable"],
-                            a_correct: 3
+                            a_correct: 3,
+                            expl: "When f(a) = f(b), there is a possibility that f(x) will only be 7 at exactly a and b, and nowhere else"
                         },
                         {
                             q: "Which of the following is always a true statement?",
                             as: ["Differentiability implies continuity", "Continuity implies differentiability", "For f to be a function, it must be continuous", "If f's derivative is continuous, then f is twice-differentiable"],
-                            a_correct: 1
+                            a_correct: 1,
+                            expl: "If a function is differentiable somewhere, that means it must be continuous"
                         }
                     ]
                 },
@@ -151,7 +157,8 @@ class courses {
                         {
                             q: "f(x) = 2g(x)\ng(x) = 3x^2\n\nWhat is the value of f'(2)?",
                             as: ["f'(2) = 3", "f'(2) = 6", "f'(2) = 12", "f'(2) = 24"],
-                            a_correct: 4
+                            a_correct: 4,
+                            expl: "Use the power rule:\ng'(x) = 6x\nf'(x) = 2 * 6x\nf'(2) = 2 * 6 * 2 = 24"
                         },
                     ]
                 },
@@ -233,7 +240,15 @@ class courses {
                 },
                 {
                     name: "Sig Fig Rhapsody",
-                    url: "https://www.youtube.com/shorts/GxPOKSy3GGc"
+                    url: "https://www.youtube.com/shorts/GxPOKSy3GGc",
+                    practiceProblems: [
+                        {
+                            q: "How many significant figures does this number have?\n003.0780",
+                            as: ["3", "4", "5", "7"],
+                            a_correct: 3,
+                            expl: "Leading zeroes never count: 3.0780\nCaptive zeroes always count: 3.0780\nTrailing zeroes only count if a decimal is found: 3.0780\n-> 5 sig figs"
+                        }
+                    ]
                 },
                 {
                     name: "Louie Zong - Asymptotic (StudyingWorks cover)",

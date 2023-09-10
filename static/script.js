@@ -14,8 +14,8 @@ General
 Practice Lightbox
     - Feat: store question states for lightbox session
     - Feat: correct/incorrect counts and percentages
-    - Feat: question explanations (optional; compatibility with creator)
     - Frontend: layout and styles
+    - Shuffle answer order
 Question Creator
     - Feat: question explanations (optional; compatibility with lightbox)
     - Feat: display all created questions in a list to the side

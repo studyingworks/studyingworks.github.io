@@ -77,6 +77,14 @@ function displayUpdatedPracticeLightbox() {
             document.getElementById('plb_inans' + i).style.removeProperty('background-color');
         }
     }
+    if (lightboxData.questionAnswered) {
+        document.getElementById("plb_expl").style.display = 'inline';
+        document.getElementById("plb_expl").innerText =
+            '[' + ['A','B','C','D'][currentQuestionData.a_correct - 1] + ']'
+            + ' is the correct answer\n\n' + currentQuestionData.expl;
+    } else {
+        document.getElementById("plb_expl").style.display = 'none';
+    }
 }
 
 // Answer input buttons
