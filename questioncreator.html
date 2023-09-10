@@ -34,8 +34,12 @@
         <br><b>Option #2:</b> <input id="in_2" type="text" placeholder="OPTION 2">
         <br><b>Option #3:</b> <input id="in_3" type="text" placeholder="OPTION 3">
         <br><b>Option #4:</b> <input id="in_4" type="text" placeholder="OPTION 4">
-        <hr>
+        <br>
         <b>Correct Option #:</b> <input id="in_correct" type="text" placeholder="CORRECT OPTION # (1-4)">
+        <span id="disp_hint3" style="display:none;">✨Hint: enter a number 1-4, then press tab✨</span>
+        <br>
+        <b>Explanation:</b>
+        <br><textarea id="in_expl" placeholder="EXPLANATION (OPTIONAL)"></textarea>
         <span id="disp_hint3" style="display:none;">✨Hint: enter a number 1-4, then press tab✨</span>
         <hr>
         <button id="in_submit">Submit and start new question</button>
@@ -78,6 +82,13 @@
             else document.getElementById('disp_hint' + i).style.display = 'none';
         }
     }
+    function sanitiseInputString(inStr) {
+        return inStr.replace(/\n/g, '\\n').replace(/\"/g, '\\"');
+    }
+    function sanitiseInputNumString(inNum) {
+        // todo
+        return inNum;
+    }
     // On click control buttons
     // Submit and start new question
     document.getElementById('in_submit').addEventListener('click', function() {
@@ -101,14 +112,16 @@
         // Submit (add to totalQuestions)
         totalQuestions += encryptSimple(
             '{\n'
-            + '    q: "' + document.getElementById('in_title').value.replace(/\n/g, '\\n') + '",\n'
-            + '    as: [["' + document.getElementById('in_1').value
-            + '", "' + document.getElementById('in_2').value
-            + '", "' + document.getElementById('in_3').value
-            + '", "' + document.getElementById('in_4').value
+            + '    q: "' + sanitiseInputString(document.getElementById('in_title').value) + '",\n'
+            + '    as: [["' + sanitiseInputString(document.getElementById('in_1').value)
+            + '", "' + sanitiseInputString(document.getElementById('in_2').value)
+            + '", "' + sanitiseInputString(document.getElementById('in_3').value)
+            + '", "' + sanitiseInputString(document.getElementById('in_4').value)
             + '"],\n'
-            + '    a_correct: ' + document.getElementById('in_correct').value
-            + '\n},\n'
+            + '    a_correct: ' + sanitiseInputNumString(document.getElementById('in_correct').value)
+            + ',\n'
+            + '    expl: "' + sanitiseInputString(document.getElementById('in_expl').value)
+            + '"\n},\n'
         );
         totalQuestionsCount++;
         document.getElementById('disp_qnum').innerText = totalQuestionsCount;
@@ -120,6 +133,7 @@
         document.getElementById('in_3').value = '';
         document.getElementById('in_4').value = '';
         document.getElementById('in_correct').value = '';
+        document.getElementById('in_expl').value = '';
         // Start at the top and reset hints
         document.getElementById('in_title').focus();
         displayTabHint(1);
