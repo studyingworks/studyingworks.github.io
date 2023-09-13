@@ -18,7 +18,7 @@ h1 {
 
 h2 {
     color:#2d7d82 /* #d71e00 */;
-    font-size: 13px;
+    font-size: 14px;
     font-family: 'Segoe UI';
     margin-left: 0px;
     margin-top: 6px;
@@ -26,7 +26,6 @@ h2 {
 }
 
 .span {
-    font-size: 12px;
     font-family: 'Segoe UI';
 }
 
@@ -128,7 +127,7 @@ hr {
     padding:4px;
     background-color:#ffffff;
     border-radius:5px;
-    font-size: 12px;
+    font-size: 13px;
     font-family: 'Segoe UI';
     color: rgb(31, 31, 31);
     width:97%; /* 800px */
@@ -179,7 +178,7 @@ a:active {
     text-decoration:underline;
     color:#46aea3;
     cursor:pointer;
-    font-size:12px;
+    font-size:13px;
     background:none;
     margin-left:0px;
     padding-left:0px;
@@ -189,7 +188,7 @@ a:active {
     text-decoration:underline;
     color:#2d7d82;
     cursor:pointer;
-    font-size:12px;
+    font-size:13px;
     background:none;
     margin-left:0px;
     padding-left:0px;
@@ -199,7 +198,7 @@ a:active {
     text-decoration:underline;
     color:#46aea3;
     cursor:pointer;
-    font-size:12px;
+    font-size:13px;
     background:none;
     margin-left:0px;
     padding-left:0px;
@@ -244,4 +243,36 @@ button:disabled {
     height:16px;
     padding:2px;
     font-size:12px;
+}
+
+/* Scrolling lesson link divider container */
+.scrolldivcontainer {
+    background-color: rgb(238, 238, 238);
+    padding:0px;
+}
+
+/* Scrolling lesson link divider */
+.scrolldiv {
+    padding:10px;
+    padding-top:0px;
+    /*background-color:rgb(238, 238, 238);*/
+    max-height:500px;
+    overflow-y:scroll;
+    /* Scroll tip shadow */
+    background:
+        linear-gradient(rgb(238, 238, 238) 30%, rgba(255, 255, 255, 0)) center top,
+        linear-gradient(rgba(255, 255, 255, 0), rgb(238, 238, 238) 70%) center bottom,
+        radial-gradient(
+            farthest-side at 50% 0,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0)
+        ) center top,
+        radial-gradient(
+            farthest-side at 50% 100%,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0)
+        ) center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+    background-attachment: local, local, scroll, scroll;
 }

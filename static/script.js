@@ -11,11 +11,15 @@ General
     - Feat: link back to home on the ptable page
     - Align videos better?
     - Refactor: move all iframe creation into createIframe()
+    - Cleaner UI (spacing, style, etc.)
+    - Improve video loading buffer time (only load videos when tab is clicked?)
 Practice Lightbox
     - Feat: store question states for lightbox session
     - Feat: correct/incorrect counts and percentages
     - Frontend: layout and styles
     - Shuffle answer order
+    - Allow embedded timestamps in explanations (ex. 5:12 links to 5 min, 12 sec of the lesson video)
+    - Cleaner UI (spacing, style, etc.)
 Question Creator
     - Feat: question explanations (optional; compatibility with lightbox)
     - Feat: display all created questions in a list to the side
@@ -111,27 +115,30 @@ for (let i = 0; i < courses.names.length; i++) {
                     // Append
                     let thissectionlk = document.createElement('span');
                     let vidurl = 'none'; // https://www.youtube.com/channel/UC-9IyDlMjLaLFhD1VJpfBpg
+                    thissectionlk.innerHTML = '<div style="display:block; height:10px;"></div>Lesson ' + (t + 1) + ': ' + thesesections[t].name + '<br>';
                     // Add link, if possible
                     if (thesesections[t].url != undefined) {
                         // Add link
                         vidurl = thesesections[t].url;
-                        thissectionlk.innerHTML = ''
+                        thissectionlk.innerHTML += ''
+                        +'&nbsp;&nbsp;&nbsp;&nbsp;'
                         +'<a href="'+vidurl+'" class="link" target="_blank">'
                         +'<img src="static/images/icon-yt.svg" width="12px" height="12px">'
-                        +'Lesson '+(t+1)+': '+thesesections[t].name+'</a><br>'; // +'Section 1.'+(t+1)+': '+thesesections[t].name+'</a><br>';
+                        +' Video Lesson</a><br>'; // +'Section 1.'+(t+1)+': '+thesesections[t].name+'</a><br>';*/
                     }
-                    else {
+                    /*else {
                         thissectionlk.innerHTML = ''
                         +'Lesson '+(t+1)+': '+thesesections[t].name+'<br>';
-                    }
+                    }*/
                     divtoload2.append(thissectionlk);
                     // Add practice problems, if possible
                     if ('practiceProblems' in thesesections[t]) {
                         // Add practice problems under link
                         thissectionlk.innerHTML += ''
-                        +'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+                        +'&nbsp;&nbsp;&nbsp;&nbsp;'
                         +'<a class="link" onclick="openPracticeLightbox('+i+', '+t+');">'
-                        +'Try Practice Problems for this lesson</a><br>';
+                        +'<img src="static/images/icon-practice_large.png" width="12px" height="12px">'
+                        +' Try Practice Problems for this lesson</a><br>';
                     }
                     // Create iframe for video at bottom of page (other than shorts)
                     if (thesesections[t].url != undefined && !(thesesections[t].url.includes('shorts'))) {
