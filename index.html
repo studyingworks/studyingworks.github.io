@@ -28,7 +28,7 @@
             </h2>
             <input id="search-bar" type="text" style="margin-left:10px; width:230px; font-family:'Segoe UI'" placeholder="Search videos 🔍" segoe="">
         </div>
-        <br><hr>
+        <br><hr style="color: rgba(255, 255, 255, 0.5); border-color:rgba(255, 255, 255, 0.5);">
         <!-- Links (bottom) -->
         <h2 class="topLink" title="AP Chemistry" id="lkt-ap-chem">AP Chem
             <div class="dropdown-content" id="lk-ap-chem">
@@ -90,21 +90,38 @@
     <!-- HOME -->
     <div id="pg-home" class="pagediv">
         <h2>Welcome to StudyingWorks!</h2>
-        StudyingWorks is a free online tutorial service with video lessons designed to help in all of your difficult classes.
-        Get started, using the search bar, visiting our YouTube channel, or choosing a subject above!
+        StudyingWorks is a free online tutorial service with interactivity-driven video lessons designed to help in all of your difficult classes.
+        Get started by visiting our YouTube channel or choosing a subject above!
+        <hr>
         <h2>YouTube channel</h2>
         On our channel, <a href="https://www.youtube.com/channel/UC-9IyDlMjLaLFhD1VJpfBpg" class="link">StudyingWorks</a>,
         we upload video lessons and tutorials for difficult topics.
         Consider subscribing for more content!
-        <h2>Contact</h2>
-        Have a comment, suggestion, or video request? Let us know!
-        <br> <a id="lk-contact" class="link">Contact</a>
+        <div style="background-color: rgb(238, 238, 238); width: 125px; padding:8px; margin-top:8px; margin-left: 10px;">
+            <img src="static/images/StudyingWorks_Logo_5.png" height="30px;" style="border-radius:15px;">
+            <button onclick="location.href='https://www.youtube.com/@studyingworks'" class="ytButton" style="float:right;">Subscribe</button>
+        </div>
+        <h2>News</h2>
+        <div class="flex-container">
+            <div>
+                <b>Welcome to StudyingWorks!</b>
+                <br>StudyingWorks is a free online tutorial service for all your difficult classes. Just visit our channel or choose a subject above!
+                <br><br>2022/03/16
+            </div>
+            <div>
+                <b>Practice problems coming soon</b>
+                <br>We're working on implementing practice problems so you can put your learning to the test.
+                <br><br>2023/09/19
+            </div>
+        </div>
         <h2>Here are some of our recent uploads:</h2>
         (Videos may take a few seconds to load if you just opened the page)
         <div id="pg-home-vids" class="vidsdiv" style="width:650px">
             <!-- <iframe width="300" height="200" src="https://www.youtube.com/embed/gZjYA6iDRyk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe width="300" height="200" src="https://www.youtube.com/embed/HQuBH4IHVfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         </div>
+        <h2>About Us & Contact</h2>
+        Have a comment, suggestion, or video request? <a id="lk-contact" class="link">Let us know!</a>
     </div>
     <!-- AP CHEM -->
     <div id="pg-ap-chem-1" style="display:none;" class="pagediv">
@@ -113,6 +130,7 @@
         including structure and states of matter, intermolecular forces,
         and reactions. You'll do hands-on lab investigations and
         use chemical calculations to solve problems. <span class="t_gray">(source: CollegeBoard)</span>
+        <hr>
         <h2>All Lessons</h2>
         <div class="scrolldivcontainer">
             <div id="pg-ap-chem-1-links" class="scrolldiv"></div>
@@ -144,6 +162,7 @@
         differential and integral calculus. You'll work to
         understand the theoretical basis and solve problems
         by applying your knowledge and skills. <span class="t_gray">(source: CollegeBoard)</span>
+        <hr>
         <h2>All Lessons</h2>
         <div class="scrolldivcontainer">
             <div id="pg-ap-calc-1-links" class="scrolldiv"></div>
@@ -159,6 +178,7 @@
         c. 1491 to the present. You'll analyze texts, visual sources,
         and other historical evidence and write essays expressing
         historical arguments. <span class="t_gray">(source: CollegeBoard)</span>
+        <hr>
         <h2>All Lessons</h2>
         <div class="scrolldivcontainer">
             <div id="pg-apush-1-links" class="scrolldiv"></div>
@@ -175,6 +195,7 @@
         periods and write essays with different aims: for example,
         to explain an idea, argue a point, or persuade your
         reader of something. <span class="t_gray">(source: CollegeBoard)</span>
+        <hr>
         <h2>All Lessons</h2>
         <div class="scrolldivcontainer">
             <div id="pg-ap-lang-1-links" class="scrolldiv"></div>
@@ -190,6 +211,7 @@
         power; mechanical waves and sound; and introductory,
         simple circuits. You'll do hands-on laboratory work
         to investigate phenomena. <span class="t_gray">(source: CollegeBoard)</span>
+        <hr>
         <h2>All Lessons</h2>
         <div class="scrolldivcontainer">
             <div id="pg-ap-physics-1-links" class="scrolldiv"></div>
@@ -201,6 +223,7 @@
     <div id="pg-shorts-1" style="display:none;" class="pagediv">
         <h2>#Shorts</h2>
         Short videos or songs by StudyingWorks.
+        <hr>
         <h2>All videos</h2>
         <div class="scrolldivcontainer">
             <div id="pg-shorts-1-links" class="scrolldiv"></div>

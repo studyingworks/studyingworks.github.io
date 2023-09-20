@@ -11,8 +11,10 @@ General
     - Feat: link back to home on the ptable page
     - Align videos better?
     - Refactor: move all iframe creation into createIframe()
-    - Cleaner UI (spacing, style, etc.)
+    - Improve logo/title blending in the header
+    - Cleaner UI (spacing, style, less whitespace at the bottom, etc.)
     - Improve video loading buffer time (only load videos when tab is clicked?)
+    - Get font working on chromebooks
 Practice Lightbox
     - Feat: store question states for lightbox session
     - Feat: correct/incorrect counts and percentages
