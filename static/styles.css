@@ -306,7 +306,7 @@ button:disabled {
 .flex-container {
     display: flex;
 }
-.flex-container > div {
+.flex-item-div {
     background-color: rgb(238, 238, 238);
     color: rgb(87, 87, 87);
     margin: 10px;
