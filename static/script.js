@@ -1,5 +1,5 @@
 // Script for StudyingWorks
-var version = "0.0.7";
+var version = "0.0.8";
 console.log('STUDYING WORKS: v'+version);
 
 // Existing pages (other than class-specific ones)
@@ -15,6 +15,7 @@ General
     - Cleaner UI (spacing, style, less whitespace at the bottom, etc.)
     - Improve video loading buffer time (only load videos when tab is clicked?)
     - Get font working on chromebooks
+    - About section (also on channel)
 Practice Lightbox
     - Feat: store question states for lightbox session
     - Feat: correct/incorrect counts and percentages
