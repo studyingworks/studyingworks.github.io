@@ -9,6 +9,7 @@ var existingPages = ["home", "searchres", "contact"];
 TO DO:
 General
     - Feat: link back to home on the ptable page
+    - Feat: page for career/technical
     - Align videos better?
     - Refactor: move all iframe creation into createIframe()
     - Improve logo/title blending in the header
@@ -27,6 +28,11 @@ Question Creator
     - Feat: question explanations (optional; compatibility with lightbox)
     - Feat: display all created questions in a list to the side
     - Feat: allow editing or removing questions
+Promotion
+    - Mission statement/about/credits confirmation
+    - Sync about on YT channel
+    - Try to add to Google Search Console
+    - Overall increase promotion
 */
 
 // Functions
@@ -207,3 +213,7 @@ document.getElementById('search-bar').onchange = function() {
     document.getElementById('search-string-disp').innerText = searchString;
     document.getElementById('pg-searchres').style.display = 'block';
 }
+
+// Update the current year
+let thisDate = new Date();
+document.getElementById('year_detail').innerText = thisDate.getFullYear();
