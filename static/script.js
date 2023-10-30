@@ -10,13 +10,14 @@ TO DO:
 General
     - Feat: link back to home on the ptable page
     - Feat: page for career/technical
-    - Align videos better?
     - Refactor: move all iframe creation into createIframe()
+    - Improve video loading buffer time (only load videos when tab is clicked?)
+Design
     - Improve logo/title blending in the header
     - Cleaner UI (spacing, style, less whitespace at the bottom, etc.)
-    - Improve video loading buffer time (only load videos when tab is clicked?)
     - Get font working on chromebooks
-    - About section (also on channel)
+    - Align videos better?
+    - Improve about section design
 Practice Lightbox
     - Feat: store question states for lightbox session
     - Feat: correct/incorrect counts and percentages
@@ -29,8 +30,7 @@ Question Creator
     - Feat: display all created questions in a list to the side
     - Feat: allow editing or removing questions
 Promotion
-    - Mission statement/about/credits confirmation
-    - Sync about on YT channel
+    - Sync mission statement/about/credits on YT channel
     - Try to add to Google Search Console
     - Overall increase promotion
 */

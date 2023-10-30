@@ -193,6 +193,41 @@ class courses {
                 {
                     name: "Related Rates",
                     url: "https://www.youtube.com/watch?v=hX1FeAUu__w"
+                },
+                {
+                    name: "Integration by Parts",
+                    practiceProblems: [
+                        {
+                            q: "How is integration by parts generally derived?",
+                            as: ["Memorising", "Partial Fraction Decomposition", "Integrating the Product Rule", "Integrating the Quotient Rule"],
+                            a_correct: 3,
+                            expl: "Integrating the Product Rule (the derivative of u * v) will get you the formula for integration by parts"
+                        },
+                        {
+                            q: "In what general scenario is integration by parts used?",
+                            as: ["When you don't know how to take the integral of one of the parts", "When one of the LIATE/LIPETs exists", "When there are multiple terms to be integrated", "Both A and B"],
+                            a_correct: 1,
+                            expl: "LIATE/LIPET is a guide for choosing u, but some of them (such as Algebraic Expressions) can often be integrated without using parts if they're on their own. One time you use Integration by Parts is if you don't know how to integrate one of the terms."
+                        },
+                        {
+                            q: "∫ln(x)dx\nWhat will u be?",
+                            as: ["ln(x)", "ln(x)dx", "1", "1dx"],
+                            a_correct: 1,
+                            expl: "You take the derivative of u to get du. You can take the derivative of ln(x) very easily, so that should be u (the dx is needed so you can integrate dv)."
+                        },
+                        {
+                            q: "∫sin(x)dx\nIs it a good idea to use integration by parts?",
+                            as: ["Yes because there is trig, which is in LIATE", "No because trig is towards the end of LIATE", "Yes because sin(x) is easy to take the derivative of", "No because it is unnecessary"],
+                            a_correct: 4,
+                            expl: ""
+                        },
+                        {
+                            q: "∫f(x)g'(x)dx\nf(x) = x^3\ng'(x) = x^2\nMust integration by parts to be used?",
+                            as: ["Yes, u = f(x)", "No, trick question", "Yes, u = g'(x)", "yes, u = g'(x)dx"],
+                            a_correct: 2,
+                            expl: "Just replace f(x)g'(x) with x^5"
+                        },
+                    ]
                 }
             ]
         ],
