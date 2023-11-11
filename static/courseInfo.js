@@ -208,7 +208,75 @@ class courses {
                 },
                 {
                     name: "Complex Differentiation",
-                    url: "https://www.youtube.com/watch?v=z2f5_kWjch8"
+                    url: "https://www.youtube.com/watch?v=z2f5_kWjch8",
+                    practiceProblems: [
+                        {
+                            q: "What is the chain rule?",
+                            as: ["d/dx f(x) = f'(x)", "d/dx f(g(x)) = f'(g(x))g'(x)", "d/dx f(g(x)) = f(g'(x))f'(x)", "d/dx f(g(x)) = f'(g'(x))"],
+                            a_correct: 2,
+                            expl: ""
+                        },
+                        {
+                            q: "Given that d/dx sin(x) = cos(x),\nevaluate d/dx sin(2x)",
+                            as: ["sin(2x)", "cos(2x)", "2sin(2x)", "2cos(2x)"],
+                            a_correct: 4,
+                            expl: "d/dx sin(x) = cos(x)\nd/dx 2x = 2"
+                        },
+                        {
+                            q: "y = 3z(2x)\nWhat is dy/dx?",
+                            as: ["3", "6", "3z'(2x)", "6z'(2x)"],
+                            a_correct: 4,
+                            expl: "Use chain rule"
+                        },
+                        {
+                            q: "Describe Chain Rule",
+                            as: ["You must also take the derivative of the inner function", "The same as the power rule", "When multiplying two functions, you must distribute them", "The Chain Rule is not real"],
+                            a_correct: 1,
+                            expl: ""
+                        },
+                        {
+                            q: "Taking the derivative of which of these requires clearly using the Chain Rule?",
+                            as: ["y=x^2", "y=2x^2", "y=cos(x)", "y=cos(x^3)"],
+                            a_correct: 4,
+                            expl: ""
+                        },
+                        {
+                            q: "Review: which rule says that d/dx x^2 = 2x?",
+                            as: ["Quotient Rule", "Chain Rule", "Power Rule", "Product Rule"],
+                            a_correct: 3,
+                            expl: ""
+                        },
+                        {
+                            q: "Given that d/dx ln(x) = 1/x:\nwhat is d/dx ln(4x)?",
+                            as: ["1/4x", "4/x", "1/x", "1/4"],
+                            a_correct: 3,
+                            expl: "d/dx ln(4x) = (1/4x)*4 = 4/4x = 1/x"
+                        },
+                        {
+                            q: "Given that d/dx cos(x) = -sin(x):\nwhat is d/dx cos(x^3)?",
+                            as: ["-sin(x^3)", "-3x^2sin(x^3)", "-3x^2sin(x)", "-sin(3x^2)"],
+                            a_correct: 2,
+                            expl: ""
+                        },
+                        {
+                            q: "Review: which rule says that d/dx f(g(x)) = f'(g(x))g'(x)",
+                            as: ["Chain Rule", "Power Rule", "Product Rule", "Rule of Nested Functions"],
+                            a_correct: 1,
+                            expl: ""
+                        },
+                        {
+                            q: "Review: what is the derivative of 1/x?",
+                            as: ["1/x^2", "2/x^2", "-1/x^2", "-2/x^2"],
+                            a_correct: 3,
+                            expl: ""
+                        },
+                        {
+                            q: "Which case does NOT need chain rule?",
+                            as: ["ln(3x)", "3sin(x)", "4ln(2x)", "sin(x^2)"],
+                            a_correct: 2,
+                            expl: ""
+                        }
+                    ]
                 },
                 {
                     name: "Implicit Differentiation",
