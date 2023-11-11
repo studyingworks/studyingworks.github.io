@@ -112,11 +112,51 @@ class courses {
                 },
                 {
                     name: "Finding Limits Analytically",
-                    url: "https://www.youtube.com/watch?v=sVYNzAbguCg"
+                    url: "https://www.youtube.com/watch?v=sVYNzAbguCg",
+                    practiceProblems: [
+                        {
+                            q: "What is a limit?",
+                            as: ["The value when f(x) equals an x", "The value when f(x) approaches an x", "The value of f(infinity)", "The highest limit f(x) approaches (its maximum)"],
+                            a_correct: 2,
+                            expl: ""
+                        },
+                        {
+                            q: "lim x->3 f(x) exists. What must the graph be near 3?",
+                            as: ["A single continuous smooth line/curve", "A single continuous smooth line/curve except for at 3, where there can be a discontinuity", "A line/curve on the left and on the right both approaching the same value", "It can be anything"],
+                            a_correct: 3,
+                            expl: "This means both the left and the right limits exist and are equal"
+                        },
+                        {
+                            q: "Using a graphing utility, graph f(x)=2x.\nWhat is lim x->3 f(x)?",
+                            as: ["3", "6", "-6", "2"],
+                            a_correct: 2,
+                            expl: "See the value the graph approaches as x approaches 3"
+                        }
+                    ]
                 },
                 {
                     name: "Understanding the Derivative",
-                    url: "https://www.youtube.com/watch?v=lXWUHTeee4s"
+                    url: "https://www.youtube.com/watch?v=lXWUHTeee4s",
+                    practiceProblems: [
+                        {
+                            q: "What is the derivative?",
+                            as: ["The slope", "The y value", "The area under the curve", "The inverse"],
+                            a_correct: 1,
+                            expl: ""
+                        },
+                        {
+                            q: "What is the derivative of the car's velocity?",
+                            as: ["Its position", "Its speed", "It does not exist (DNE)", "Its acceleration"],
+                            a_correct: 4,
+                            expl: "The rate that the velocity changes is the acceleration"
+                        },
+                        {
+                            q: "What is the derivative of a linear function?",
+                            as: ["A constant value", "A y=mx+b equation", "A quadratic", "An exponential"],
+                            a_correct: 1,
+                            expl: "The linear function has a constant rate of change"
+                        }
+                    ]
                 },
                 {
                     name: "Derivatives by Definition",
@@ -255,7 +295,39 @@ class courses {
             [
                 {
                     name: "Rhetorical Analysis Tips",
-                    url: "https://www.youtube.com/watch?v=GsYeFpjyDak"
+                    url: "https://www.youtube.com/watch?v=GsYeFpjyDak",
+                    practiceProblems: [
+                        {
+                            q: "\"Through the author's bountiful selection of numerous rhetorical devices, they attempt to convey the message that their literary work fixates upon.\"\nWhat is wrong with this essay thesis?",
+                            as: ["No specific message is stated", "Simply stating \"through the author's rhetorical strategies\" is vague", "There is no implied structure or meaning for the essay to build off of", "All of the above"],
+                            a_correct: 4,
+                            expl: "This is a poorly written thesis. Remember, in AP Lang/Lit, the contents of your writing--not over-the-top diction--is what earns you points. If you wish to pursue the \"style point\", you need a good base essay to work with."
+                        },
+                        {
+                            q: "Which of the following are specific rhetorical strategies?",
+                            as: ["Juxtaposition", "Making a comparison between two ideas", "Trying to draw a picture in the reader's mind", "All of the above"],
+                            a_correct: 4,
+                            expl: "Though specific words such as \"juxtaposition\" can be helpful for conveying ideas quickly, you can summarize an author's strategy in your own words instead, as long as you are clear and specific enough."
+                        },
+                        {
+                            q: "What is a good, efficient way to make your essay more appealing to a reader?",
+                            as: ["Vary your verbs and be precise", "Write in a poetic style", "Use casual diction", "Write in olde English"],
+                            a_correct: 1,
+                            expl: "Varying your verbs and being precise allows you to convey your ideas more clearly and prevent repetition. See \"prose style\" or other writing books for more.\nSome students try to make their essay unique in other ways, but it generally fails unless they are experienced writers."
+                        },
+                        {
+                            q: "Name the closest synonym of \"illustrates\"",
+                            as: ["Urges", "Portrays", "Argues", "Advises"],
+                            a_correct: 2,
+                            expl: "Portrayal and Illustration are both terms relating to showing the discussed ideas in a certain light--think of it like a painting or drawing. The other terms are similar in usage, but connote different things."
+                        },
+                        {
+                            q: "How is purpose different from message?",
+                            as: ["Purpose involves getting the audience to act or encouraging change", "Purpose involves conveying an idea to an audience", "Purpose is focused only on themes and lessons, not actions", "Purpose is only for speeches"],
+                            a_correct: 1,
+                            expl: "Purpose is about actually making an impact on the world, while message is more about the ideas and themes discussed."
+                        }
+                    ]
                 }
             ]
         ],
@@ -263,7 +335,45 @@ class courses {
             [
                 {
                     name: "Designing a Controlled Experiment",
-                    url: "https://www.youtube.com/watch?v=y0LB47mcOM0"
+                    url: "https://www.youtube.com/watch?v=y0LB47mcOM0",
+                    practiceProblems: [
+                        {
+                            q: "Which of these must ALWAYS be used when graphing data in physics?",
+                            as: ["Point protectors", "Lines starting at (0, 0)", "Protractors", "Calculators"],
+                            a_correct: 1,
+                            expl: "Point protectors must always be used to clarify points; the rest are not necessarily going to be used on all problems"
+                        },
+                        {
+                            q: "What is a control variable?",
+                            as: ["The variable that is changed", "The variable that is observed", "The things that stay the same", "A synonym for experimental units"],
+                            a_correct: 3,
+                            expl: ""
+                        },
+                        {
+                            q: "Which of these should use a controlled experiment?",
+                            as: ["Determining the average height of the people in the class", "Finding the relationship between height and shoe size for students", "Determining whether listening to music causes more effective studying", "Determining the average height of students in the whole city"],
+                            a_correct: 3,
+                            expl: "Controlled experiments test cause-and-effect relationships"
+                        },
+                        {
+                            q: "Which of the following is important in an experiment?",
+                            as: ["Control", "Replication", "Comparison", "All three"],
+                            a_correct: 4,
+                            expl: "All three are important"
+                        },
+                        {
+                            q: "I give ten plants in my garden a specific brand of fertilizer and record their growth each day over the next 2 weeks. I ensure they all get an equal amount of sunlight. Is this an experiment?",
+                            as: ["Yes: there is control", "Yes: there is observation", "No: there is no comparison", "No: there is no control"],
+                            a_correct: 3,
+                            expl: "There is control in ensuring sunlight stays the same, but there is no comparison--only one treatment is tried in the experiment, so it cannot be compared to anything."
+                        },
+                        {
+                            q: "Why are experiments important in Physic?\ni. They demonstrate scientific concepts\nii. They allow us to turn theories into facts\niii. They allow us to test our hypotheses",
+                            as: ["i", "i & iii", "ii & iii", "i, ii, & iii"],
+                            a_correct: 2,
+                            expl: "Facts are something known to be true with no possible interpretation or disagreement. Theories are not facts because they are supported by experiments, but they can change as new discoveries are revealed. This idea of change is essential to science--for example, the understanding of the atom has changed across history, and our understanding today could continue to change in the future."
+                        }
+                    ]
                 }
             ]
         ],
@@ -282,6 +392,96 @@ class courses {
                             as: ["3", "4", "5", "7"],
                             a_correct: 3,
                             expl: "Leading zeroes never count: 3.0780\nCaptive zeroes always count: 3.0780\nTrailing zeroes only count if a decimal is found: 3.0780\n-> 5 sig figs"
+                        },
+                        {
+                            q: "How many sig figs: 03.14",
+                            as: ["2", "3", "4", "5"],
+                            a_correct: 2,
+                            expl: "(0) 3 . 1 4"
+                        },
+                        {
+                            q: "How many sig figs: 4.0560",
+                            as: ["3", "4", "5", "6"],
+                            a_correct: 3,
+                            expl: "4.0560"
+                        },
+                        {
+                            q: "How many sig figs: 6800",
+                            as: ["2", "3", "4", "5"],
+                            a_correct: 1,
+                            expl: "68 (00)"
+                        },
+                        {
+                            q: "How many sig figs: 6800.",
+                            as: ["2", "3", "4", "5"],
+                            a_correct: 3,
+                            expl: "6800."
+                        },
+                        {
+                            q: "How many sig figs: 10.0",
+                            as: ["1", "2", "3", "4"],
+                            a_correct: 3,
+                            expl: "10.0"
+                        },
+                        {
+                            q: "How many sig figs: 010101010",
+                            as: ["6", "7", "8", "9"],
+                            a_correct: 2,
+                            expl: "(0) 1010101 (0)"
+                        },
+                        {
+                            q: "How many sig figs: 3",
+                            as: ["1", "2", "3", "4"],
+                            a_correct: 1,
+                            expl: "3"
+                        },
+                        {
+                            q: "How many sig figs: 3+4",
+                            as: ["1", "2", "3", "4"],
+                            a_correct: 1,
+                            expl: "3 and 4 each have 1 sig fig and add to 7, which also has 1"
+                        },
+                        {
+                            q: "How many sig figs: 1.2 * 3.45",
+                            as: ["1", "2", "3", "4"],
+                            a_correct: 2,
+                            expl: "1.2 has the fewest sig figs, which is 2, so the answer will have 2"
+                        },
+                        {
+                            q: "How many sig figs: 10.0/5.0",
+                            as: ["1", "2", "3", "4"],
+                            a_correct: 2,
+                            expl: "5.0 has 2 sig figs, which is the fewest"
+                        },
+                        {
+                            q: "How many decimal places in result: 9.0 * 2.0",
+                            as: ["0", "1", "2", "3"],
+                            a_correct: 1,
+                            expl: "9.0 * 2.0 = 18: all have 2 sig figs"
+                        },
+                        {
+                            q: "How many sig figs: 100 * 200",
+                            as: ["1", "2", "3", "4"],
+                            a_correct: 1,
+                            expl: "Both have 1"
+                        },
+                        {
+                            q: "How many sig figs: 333.3 + 3.45",
+                            as: ["1", "2", "3", "4"],
+                            a_correct: 4,
+                            expl: "333.3 has the fewest decimals"
+                        },
+                        {
+                            q: "How many sig figs: 9 + 3",
+                            as: ["1", "2", "3", "4"],
+                            a_correct: 2,
+                            expl: "9 + 3 = 12, with 0 decimal places"
+                        },
+                        {
+                            q: "Why are sig fig rules used?",
+                            as: ["To ensure the most precise results", "To make numbers readable and simple in a consistent way", "To make calculations easier for calculators", "To make science and engineering harder"],
+                            a_correct: 2,
+                            expl: "Sig figs are not precise, nor do most calculators benefit from using them. They also should theoretically make science and engineering easier in the long run once you learn them."
                         }
                     ]
                 },
@@ -295,7 +495,33 @@ class courses {
                 },
                 {
                     name: "Tierlisting AP Classes by Difficulty",
-                    url: "https://www.youtube.com/shorts/Le12qW4ZaOo"
+                    url: "https://www.youtube.com/shorts/Le12qW4ZaOo",
+                    practiceProblems: [
+                        {
+                            q: "(These questions are just fun trivia):\nWhich of the following AP classes does not exist (DNE)?",
+                            as: ["Italian", "Latin", "Hindi", "Japanese"],
+                            a_correct: 3,
+                            expl: ""
+                        },
+                        {
+                            q: "What does the AP in AP stand for?",
+                            as: ["Advance Placement", "Advanced Placing", "Advance Placing", "Advanced Placement"],
+                            a_correct: 4,
+                            expl: ""
+                        },
+                        {
+                            q: "Who runs the national AP program?",
+                            as: ["The College Board", "The CollegeBoard", "The Collegeboard", "The College-Board"],
+                            a_correct: 1,
+                            expl: ""
+                        },
+                        {
+                            q: "Which of these is a real class?",
+                            as: ["AP Computer Science", "AP Computer Science A: Java", "AP Principles", "None of these"],
+                            a_correct: 4,
+                            expl: "AP CSA does not have \"Java\" at the end"
+                        }
+                    ]
                 }
             ]
         ]
