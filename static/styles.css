@@ -21,7 +21,7 @@ h2 {
     font-size: 14px;
     font-family: 'Segoe UI';
     margin-left: 0px;
-    margin-top: 6px;
+    margin-top: 4px;
     margin-bottom: 4px;
 }
 
@@ -30,10 +30,16 @@ h2 {
 }
 
 hr {
-    color:rgb(189, 189, 189);
+    color: transparent;
     background:none;
-    border-color:rgb(189, 189, 189);
-    border-style:solid;
+    border: solid 1px rgb(207, 207, 207);
+}
+
+div.graybox {
+    background-color: rgb(238, 238, 238);
+    border: solid 1px rgb(207, 207, 207);
+    border-radius: 4px;
+    color: rgb(87, 87, 87);
 }
 
 /* Top title */
@@ -124,16 +130,15 @@ hr {
 }
 .pagediv {
     margin:8px;
-    padding:4px;
-    padding-left:10px;
-    padding-right:10px;
-    background-color:#ffffff;
+    padding:16px;
+    background-color:#fafafa;
     border-radius:5px;
     font-size: 13px;
     font-family: 'Segoe UI';
     color: rgb(31, 31, 31);
-    width:97%; /* 800px */
+    width: 98%; /* 800px */
     box-shadow: #1d495e 0px 0px 10px;
+    box-sizing: border-box;
     /* margin-left:auto;
     margin-right:auto; */
 }
@@ -277,6 +282,8 @@ button:disabled {
     background-repeat: no-repeat;
     background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
     background-attachment: local, local, scroll, scroll;
+    border: solid 1px rgb(207, 207, 207);
+    border-radius: 4px;
 }
 
 /* YT button */
@@ -307,10 +314,8 @@ button:disabled {
     display: flex;
 }
 .flex-item-div {
-    background-color: rgb(238, 238, 238);
-    color: rgb(87, 87, 87);
-    margin: 10px;
-    padding: 5px;
+    margin: 6px;
+    padding: 8px;
     width: 150px;
     height: 160px;
 }

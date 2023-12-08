@@ -92,34 +92,48 @@
         <h2>Welcome to StudyingWorks!</h2>
         StudyingWorks is a free online tutorial service with interactivity-driven video lessons designed to help in all of your difficult classes.
         Get started by visiting our YouTube channel or choosing a subject above!
-        <hr>
+        <!-- <br><br><hr>
         <h2>YouTube channel</h2>
         On our channel, <a href="https://www.youtube.com/channel/UC-9IyDlMjLaLFhD1VJpfBpg" class="link">StudyingWorks</a>,
         we upload video lessons and tutorials for difficult topics.
-        Consider subscribing for more content!
-        <div style="background-color: rgb(238, 238, 238); width: 125px; padding:8px; margin-top:8px; margin-left: 10px;">
-            <img src="static/images/StudyingWorks_Logo_5.png" height="30px;" style="border-radius:15px;">
-            <button onclick="location.href='https://www.youtube.com/@studyingworks'" class="ytButton" style="float:right;">Subscribe</button>
+        Consider subscribing for more content! -->
+        <br>
+        <div style="display: flex;">
+            <div class="graybox" style="width: 126px; padding: 8px; margin-top: 8px; margin-left: 6px; display: inline-block; height: 32px;">
+                <img src="static/images/StudyingWorks_Logo_5.png" height="30px;" style="border-radius:15px;">
+                <button onclick="location.href='https://www.youtube.com/@studyingworks'" class="ytButton" style="float:right;">Subscribe</button>
+            </div>
+            <!-- <div class="graybox" style="width: 220px; padding: 4px; margin-top: 8px; margin-left: 6px; display: inline-block;">
+                <input id="search-bar" type="text" style="margin-left:10px; width:200px; font-family:'Segoe UI'" placeholder="Search videos 🔍" segoe="">
+            </div> --> <!-- todo: add search bar here -->
         </div>
+        <br><hr>
         <h2>News</h2>
         <div class="flex-container">
-            <div class="flex-item-div">
+            <div class="flex-item-div graybox">
                 <b>Welcome to StudyingWorks!</b>
-                <br>StudyingWorks is a free online tutorial service for all your difficult classes. Just visit our channel or choose a subject above!
+                StudyingWorks is a free online tutorial service for all your difficult classes. Just visit our channel or choose a subject above!
                 <br><br>2022/03/16
             </div>
-            <div class="flex-item-div">
-                <b>Practice problems coming soon</b>
-                <br>We're working on implementing practice problems so you can put your learning to the test.
-                <br><br>2023/09/19
+            <div class="flex-item-div graybox">
+                <b>New page styles coming soon</b>
+                <br>We're making our UI design sleeker and simpler.
+                <br><br>2023/11/15
+            </div>
+            <div class="flex-item-div graybox">
+                <b>Practice problems are here!</b>
+                <br>Check out the new practice problems so you can put your learning to the test.
+                <br><br>2023/11/15
             </div>
         </div>
+        <br><hr>
         <h2>Here are some of our recent uploads:</h2>
         (Videos may take a few seconds to load if you just opened the page)
         <div id="pg-home-vids" class="vidsdiv" style="width:650px">
             <!-- <iframe width="300" height="200" src="https://www.youtube.com/embed/gZjYA6iDRyk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe width="300" height="200" src="https://www.youtube.com/embed/HQuBH4IHVfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         </div>
+        <br><hr>
         <h2>About Us & Contact</h2>
         Based at Redondo Union High School, we are focused on interactivity, accessibility, and simplicity.
         <br><br>Mission statement: we aim to support students in rigorous courses and
@@ -258,7 +272,7 @@
 
     <!-- Footer -->
     <div id="footer" class="footer">
-        <h2 style="color:white;">©2021-<span id="year_detail">2023</span> StudyingWorks</h2>
+        <h2 style="color:white;">© 2021-<span id="year_detail">2023</span> StudyingWorks</h2>
     </div>
 </body>
 </html>
