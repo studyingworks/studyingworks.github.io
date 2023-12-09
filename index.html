@@ -86,188 +86,190 @@
         </div>
     </div>
 
-    <!-- PG: -->
-    <!-- HOME -->
-    <div id="pg-home" class="pagediv">
-        <h2>Welcome to StudyingWorks!</h2>
-        StudyingWorks is a free online tutorial service with interactivity-driven video lessons designed to help in all of your difficult classes.
-        Get started by visiting our YouTube channel or choosing a subject above!
-        <!-- <br><br><hr>
-        <h2>YouTube channel</h2>
-        On our channel, <a href="https://www.youtube.com/channel/UC-9IyDlMjLaLFhD1VJpfBpg" class="link">StudyingWorks</a>,
-        we upload video lessons and tutorials for difficult topics.
-        Consider subscribing for more content! -->
-        <br>
-        <div style="display: flex;">
-            <div class="graybox" style="width: 126px; padding: 8px; margin-top: 8px; margin-left: 6px; display: inline-block; height: 32px;">
-                <img src="static/images/StudyingWorks_Logo_5.png" height="30px;" style="border-radius:15px;">
-                <button onclick="location.href='https://www.youtube.com/@studyingworks'" class="ytButton" style="float:right;">Subscribe</button>
+    <!-- ALL PAGEDIVS -->
+    <div id="pagesCentered" style="display:flex; justify-content: center;">
+        <!-- HOME -->
+        <div id="pg-home" class="pagediv">
+            <h2>Welcome to StudyingWorks!</h2>
+            StudyingWorks is a free online tutorial service with interactivity-driven video lessons designed to help in all of your difficult classes.
+            Get started by visiting our YouTube channel or choosing a subject above!
+            <!-- <br><br><hr>
+            <h2>YouTube channel</h2>
+            On our channel, <a href="https://www.youtube.com/channel/UC-9IyDlMjLaLFhD1VJpfBpg" class="link">StudyingWorks</a>,
+            we upload video lessons and tutorials for difficult topics.
+            Consider subscribing for more content! -->
+            <br>
+            <div style="display: flex;">
+                <div class="graybox" style="width: 126px; padding: 8px; margin-top: 8px; margin-left: 6px; display: inline-block; height: 32px;">
+                    <img src="static/images/StudyingWorks_Logo_5.png" height="30px;" style="border-radius:15px;">
+                    <button onclick="location.href='https://www.youtube.com/@studyingworks'" class="ytButton" style="float:right;">Subscribe</button>
+                </div>
+                <!-- <div class="graybox" style="width: 220px; padding: 4px; margin-top: 8px; margin-left: 6px; display: inline-block;">
+                    <input id="search-bar" type="text" style="margin-left:10px; width:200px; font-family:'Segoe UI'" placeholder="Search videos 🔍" segoe="">
+                </div> --> <!-- todo: add search bar here -->
             </div>
-            <!-- <div class="graybox" style="width: 220px; padding: 4px; margin-top: 8px; margin-left: 6px; display: inline-block;">
-                <input id="search-bar" type="text" style="margin-left:10px; width:200px; font-family:'Segoe UI'" placeholder="Search videos 🔍" segoe="">
-            </div> --> <!-- todo: add search bar here -->
-        </div>
-        <br><hr>
-        <h2>News</h2>
-        <div class="flex-container">
-            <div class="flex-item-div graybox">
-                <b>Welcome to StudyingWorks!</b>
-                StudyingWorks is a free online tutorial service for all your difficult classes. Just visit our channel or choose a subject above!
-                <br><br>2022/03/16
+            <br><hr>
+            <h2>News</h2>
+            <div class="flex-container">
+                <div class="flex-item-div graybox">
+                    <b>Welcome to StudyingWorks!</b>
+                    StudyingWorks is a free online tutorial service for all your difficult classes. Just visit our channel or choose a subject above!
+                    <br><br>2022/03/16
+                </div>
+                <div class="flex-item-div graybox">
+                    <b>New page styles coming soon</b>
+                    <br>We're making our UI design sleeker and simpler.
+                    <br><br>2023/11/15
+                </div>
+                <div class="flex-item-div graybox">
+                    <b>Practice problems are here!</b>
+                    <br>Check out the new practice problems so you can put your learning to the test.
+                    <br><br>2023/11/15
+                </div>
             </div>
-            <div class="flex-item-div graybox">
-                <b>New page styles coming soon</b>
-                <br>We're making our UI design sleeker and simpler.
-                <br><br>2023/11/15
+            <br><hr>
+            <h2>Here are some of our recent uploads:</h2>
+            (Videos may take a few seconds to load if you just opened the page)
+            <div id="pg-home-vids" class="vidsdiv" style="width:650px">
+                <!-- <iframe width="300" height="200" src="https://www.youtube.com/embed/gZjYA6iDRyk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/HQuBH4IHVfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
             </div>
-            <div class="flex-item-div graybox">
-                <b>Practice problems are here!</b>
-                <br>Check out the new practice problems so you can put your learning to the test.
-                <br><br>2023/11/15
+            <br><hr>
+            <h2>About Us & Contact</h2>
+            Based at Redondo Union High School, we are focused on interactivity, accessibility, and simplicity.
+            <br><br>Mission statement: we aim to support students in rigorous courses and
+            <br>inspire a lifelong passion for learning through our creative technology-based curriculum
+            <br>and accessible academic resources.
+            <br><br>President: Isaac Kong
+            <br>Vice President: Aditya Warrier
+            <br>Secretary & Lead Web Developer: Caden Lee
+            <br>Main content & branding: Daniel Rosado, Bailey Au, Jayden Cheng, Gordon McKellips
+            <br><br>Have a comment, suggestion, or video request? <a id="lk-contact" class="link">Let us know!</a>
+            <br>&nbsp;
+        </div>
+        <!-- AP CHEM -->
+        <div id="pg-ap-chem-1" style="display:none;" class="pagediv">
+            <h2>AP Chemistry</h2><!-- - Unit 1: Atomic Structure and Properties</h2>-->
+            Learn about the fundamental concepts of chemistry
+            including structure and states of matter, intermolecular forces,
+            and reactions. You'll do hands-on lab investigations and
+            use chemical calculations to solve problems. <span class="t_gray">(source: CollegeBoard)</span>
+            <hr>
+            <h2>All Lessons</h2>
+            <div class="scrolldivcontainer">
+                <div id="pg-ap-chem-1-links" class="scrolldiv"></div>
             </div>
+            <!-- <h2>Unit 1 Notes</h2>
+            No notes exist for this unit yet. -->
+            <!-- Special feature: ptable -->
+            <h2>Special feature: Ptable</h2>
+            You'll probably need a periodic table for a lot of your assignments--after all,
+            one is provided on the AP test.
+            <br><a class="link" href="/ChemCalculators/chem-calculators.html">StudyingWorks Interactive Periodic Table + Chem Reference</a>
+            <h2>All Videos</h2>
+            <div id="pg-ap-chem-1-vids" class="vidsdiv"></div>
         </div>
-        <br><hr>
-        <h2>Here are some of our recent uploads:</h2>
-        (Videos may take a few seconds to load if you just opened the page)
-        <div id="pg-home-vids" class="vidsdiv" style="width:650px">
-            <!-- <iframe width="300" height="200" src="https://www.youtube.com/embed/gZjYA6iDRyk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="300" height="200" src="https://www.youtube.com/embed/HQuBH4IHVfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-        </div>
-        <br><hr>
-        <h2>About Us & Contact</h2>
-        Based at Redondo Union High School, we are focused on interactivity, accessibility, and simplicity.
-        <br><br>Mission statement: we aim to support students in rigorous courses and
-        <br>inspire a lifelong passion for learning through our creative technology-based curriculum
-        <br>and accessible academic resources.
-        <br><br>President: Isaac Kong
-        <br>Vice President: Aditya Warrier
-        <br>Secretary & Lead Web Developer: Caden Lee
-        <br>Main content & branding: Daniel Rosado, Bailey Au, Jayden Cheng, Gordon McKellips
-        <br><br>Have a comment, suggestion, or video request? <a id="lk-contact" class="link">Let us know!</a>
-        <br>&nbsp;
-    </div>
-    <!-- AP CHEM -->
-    <div id="pg-ap-chem-1" style="display:none;" class="pagediv">
-        <h2>AP Chemistry</h2><!-- - Unit 1: Atomic Structure and Properties</h2>-->
-        Learn about the fundamental concepts of chemistry
-        including structure and states of matter, intermolecular forces,
-        and reactions. You'll do hands-on lab investigations and
-        use chemical calculations to solve problems. <span class="t_gray">(source: CollegeBoard)</span>
-        <hr>
-        <h2>All Lessons</h2>
-        <div class="scrolldivcontainer">
-            <div id="pg-ap-chem-1-links" class="scrolldiv"></div>
-        </div>
-        <!-- <h2>Unit 1 Notes</h2>
-        No notes exist for this unit yet. -->
-        <!-- Special feature: ptable -->
-        <h2>Special feature: Ptable</h2>
-        You'll probably need a periodic table for a lot of your assignments--after all,
-        one is provided on the AP test.
-        <br><a class="link" href="/ChemCalculators/chem-calculators.html">StudyingWorks Interactive Periodic Table + Chem Reference</a>
-        <h2>All Videos</h2>
-        <div id="pg-ap-chem-1-vids" class="vidsdiv"></div>
-    </div>
-    <!-- <div id="pg-ap-chem-2" style="display:none;" class="pagediv">
-        <h2>Chemistry - Unit 2: Molecular and Ionic Compound Structure and Properties </h2>
-        <div id="pg-ap-chem-2-links"></div>
+        <!-- <div id="pg-ap-chem-2" style="display:none;" class="pagediv">
+            <h2>Chemistry - Unit 2: Molecular and Ionic Compound Structure and Properties </h2>
+            <div id="pg-ap-chem-2-links"></div>
 
-        <h2>Unit 2 Notes</h2>
-        No notes exist for this unit yet.
+            <h2>Unit 2 Notes</h2>
+            No notes exist for this unit yet.
 
-        <h2>All Unit 2 Videos</h2>
-        <div id="pg-ap-chem-2-vids"></div>
-    </div> -->
-    <!-- AP CALC -->
-    <div id="pg-ap-calc-1" style="display:none;" class="pagediv">
-        <h2>AP Calculus AB/BC</h2>
-        Explore the concepts, methods, and applications of
-        differential and integral calculus. You'll work to
-        understand the theoretical basis and solve problems
-        by applying your knowledge and skills. <span class="t_gray">(source: CollegeBoard)</span>
-        <hr>
-        <h2>All Lessons</h2>
-        <div class="scrolldivcontainer">
-            <div id="pg-ap-calc-1-links" class="scrolldiv"></div>
+            <h2>All Unit 2 Videos</h2>
+            <div id="pg-ap-chem-2-vids"></div>
+        </div> -->
+        <!-- AP CALC -->
+        <div id="pg-ap-calc-1" style="display:none;" class="pagediv">
+            <h2>AP Calculus AB/BC</h2>
+            Explore the concepts, methods, and applications of
+            differential and integral calculus. You'll work to
+            understand the theoretical basis and solve problems
+            by applying your knowledge and skills. <span class="t_gray">(source: CollegeBoard)</span>
+            <hr>
+            <h2>All Lessons</h2>
+            <div class="scrolldivcontainer">
+                <div id="pg-ap-calc-1-links" class="scrolldiv"></div>
+            </div>
+            <h2>All Videos</h2>
+            <div id="pg-ap-calc-1-vids" class="vidsdiv"></div>
         </div>
-        <h2>All Videos</h2>
-        <div id="pg-ap-calc-1-vids" class="vidsdiv"></div>
-    </div>
-    <!-- APUSH/GOV/ECON -->
-    <div id="pg-apush-1" style="display:none;" class="pagediv">
-        <h2>AP United States History/Government/Macroeconomics</h2>
-        Study the cultural, economic, political, and social
-        developments that have shaped the United States from
-        c. 1491 to the present. You'll analyze texts, visual sources,
-        and other historical evidence and write essays expressing
-        historical arguments. <span class="t_gray">(source: CollegeBoard)</span>
-        <hr>
-        <h2>All Lessons</h2>
-        <div class="scrolldivcontainer">
-            <div id="pg-apush-1-links" class="scrolldiv"></div>
+        <!-- APUSH/GOV/ECON -->
+        <div id="pg-apush-1" style="display:none;" class="pagediv">
+            <h2>AP United States History/Government/Macroeconomics</h2>
+            Study the cultural, economic, political, and social
+            developments that have shaped the United States from
+            c. 1491 to the present. You'll analyze texts, visual sources,
+            and other historical evidence and write essays expressing
+            historical arguments. <span class="t_gray">(source: CollegeBoard)</span>
+            <hr>
+            <h2>All Lessons</h2>
+            <div class="scrolldivcontainer">
+                <div id="pg-apush-1-links" class="scrolldiv"></div>
+            </div>
+            <h2>All Videos</h2>
+            <div id="pg-apush-1-vids" class="vidsdiv"></div>
         </div>
-        <h2>All Videos</h2>
-        <div id="pg-apush-1-vids" class="vidsdiv"></div>
-    </div>
-    <!-- AP LANG -->
-    <div id="pg-ap-lang-1" style="display:none;" class="pagediv">
-        <h2>AP English Language/Literature and Composition</h2>
-        Learn about the elements of argument and composition as
-        you develop your critical-reading and writing skills.
-        You'll read and analyze nonfiction works from various
-        periods and write essays with different aims: for example,
-        to explain an idea, argue a point, or persuade your
-        reader of something. <span class="t_gray">(source: CollegeBoard)</span>
-        <hr>
-        <h2>All Lessons</h2>
-        <div class="scrolldivcontainer">
-            <div id="pg-ap-lang-1-links" class="scrolldiv"></div>
+        <!-- AP LANG -->
+        <div id="pg-ap-lang-1" style="display:none;" class="pagediv">
+            <h2>AP English Language/Literature and Composition</h2>
+            Learn about the elements of argument and composition as
+            you develop your critical-reading and writing skills.
+            You'll read and analyze nonfiction works from various
+            periods and write essays with different aims: for example,
+            to explain an idea, argue a point, or persuade your
+            reader of something. <span class="t_gray">(source: CollegeBoard)</span>
+            <hr>
+            <h2>All Lessons</h2>
+            <div class="scrolldivcontainer">
+                <div id="pg-ap-lang-1-links" class="scrolldiv"></div>
+            </div>
+            <h2>All Videos</h2>
+            <div id="pg-ap-lang-1-vids" class="vidsdiv"></div>
         </div>
-        <h2>All Videos</h2>
-        <div id="pg-ap-lang-1-vids" class="vidsdiv"></div>
-    </div>
-    <!-- AP PHYSICS -->
-    <div id="pg-ap-physics-1" style="display:none;" class="pagediv">
-        <h2>AP Physics 1/2</h2>
-        Learn about the foundational principles of physics
-        as you explore Newtonian mechanics; work, energy, and
-        power; mechanical waves and sound; and introductory,
-        simple circuits. You'll do hands-on laboratory work
-        to investigate phenomena. <span class="t_gray">(source: CollegeBoard)</span>
-        <hr>
-        <h2>All Lessons</h2>
-        <div class="scrolldivcontainer">
-            <div id="pg-ap-physics-1-links" class="scrolldiv"></div>
+        <!-- AP PHYSICS -->
+        <div id="pg-ap-physics-1" style="display:none;" class="pagediv">
+            <h2>AP Physics 1/2</h2>
+            Learn about the foundational principles of physics
+            as you explore Newtonian mechanics; work, energy, and
+            power; mechanical waves and sound; and introductory,
+            simple circuits. You'll do hands-on laboratory work
+            to investigate phenomena. <span class="t_gray">(source: CollegeBoard)</span>
+            <hr>
+            <h2>All Lessons</h2>
+            <div class="scrolldivcontainer">
+                <div id="pg-ap-physics-1-links" class="scrolldiv"></div>
+            </div>
+            <h2>All Videos</h2>
+            <div id="pg-ap-physics-1-vids" class="vidsdiv"></div>
         </div>
-        <h2>All Videos</h2>
-        <div id="pg-ap-physics-1-vids" class="vidsdiv"></div>
-    </div>
-    <!-- SHORTS -->
-    <div id="pg-shorts-1" style="display:none;" class="pagediv">
-        <h2>#Shorts</h2>
-        Short videos or songs by StudyingWorks.
-        <hr>
-        <h2>All videos</h2>
-        <div class="scrolldivcontainer">
-            <div id="pg-shorts-1-links" class="scrolldiv"></div>
+        <!-- SHORTS -->
+        <div id="pg-shorts-1" style="display:none;" class="pagediv">
+            <h2>#Shorts</h2>
+            Short videos or songs by StudyingWorks.
+            <hr>
+            <h2>All videos</h2>
+            <div class="scrolldivcontainer">
+                <div id="pg-shorts-1-links" class="scrolldiv"></div>
+            </div>
+            <h2>Access via the links above</h2>
+            <div id="pg-shorts-1-vids" class="vidsdiv"></div>
         </div>
-        <h2>Access via the links above</h2>
-        <div id="pg-shorts-1-vids" class="vidsdiv"></div>
-    </div>
-    <!-- SEARCH RESULTS -->
-    <div id="pg-searchres" style="display:none;" class="pagediv">
-        <h2>Search Results</h2>
-        Results containing "<span id="search-string-disp">[your search]</span>"
-        <h2>Videos</h2>
-        <div id="pg-searchres-vids" class="vidsdiv"></div>
-    </div>
-    <!-- CONTACT MENU -->
-    <div id="pg-contact" style="display:none;" class="pagediv">
-        <h2>Contact StudyingWorks</h2>
-        Just fill out this quick <span id="search-string-disp">Google form</span>!
-        <br>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf3UoMp3UF9p3ABasGch61xLJoWmn9BJLVkKeWtFlFIh0HUIw/viewform?embedded=true"
-        width="600" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <!-- SEARCH RESULTS -->
+        <div id="pg-searchres" style="display:none;" class="pagediv">
+            <h2>Search Results</h2>
+            Results containing "<span id="search-string-disp">[your search]</span>"
+            <h2>Videos</h2>
+            <div id="pg-searchres-vids" class="vidsdiv"></div>
+        </div>
+        <!-- CONTACT MENU -->
+        <div id="pg-contact" style="display:none;" class="pagediv">
+            <h2>Contact StudyingWorks</h2>
+            Just fill out this quick <span id="search-string-disp">Google form</span>!
+            <br>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf3UoMp3UF9p3ABasGch61xLJoWmn9BJLVkKeWtFlFIh0HUIw/viewform?embedded=true"
+            width="600" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
     </div>
 
     <!-- Footer -->
