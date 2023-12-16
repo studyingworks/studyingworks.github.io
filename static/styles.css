@@ -63,7 +63,7 @@ div.graybox {
     margin-left:0px;
     padding-left:20px;
     padding-right:20px;
-    border-radius: 0px;
+    border-radius: 20px;
     margin-bottom: 0px;
     padding-bottom:4px;
     padding-top:4px;
@@ -73,7 +73,7 @@ div.graybox {
 .topLink:hover {
     /*box-shadow:#2d7d82 0px 0px 5px;*/
     display:inline;
-    background-color: black;
+    background-color: rgb(0, 19, 43);
     color: #46aea3;
     cursor:pointer; /* toadd */
 }
@@ -324,4 +324,16 @@ button:disabled {
 iframe {
     border-radius: 8px;
     box-shadow: 0px 2px 6px rgb(185, 185, 185);
+}
+
+/* Inputs */
+input[type="text"] {
+    border-radius: 20px;
+    padding: 4px;
+    padding-left: 8px;
+    background-color: rgb(238, 238, 238);
+    border: solid 1px rgb(207, 207, 207);
+}
+input[type="text"]:hover {
+    background-color: white;
 }
