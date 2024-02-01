@@ -590,6 +590,18 @@ class courses {
                             expl: "AP CSA does not have \"Java\" at the end"
                         }
                     ]
+                },
+                {
+                    name: "Don't Memorize the Arc Length Formula",
+                    url: "https://www.youtube.com/shorts/1mRIZmkFBnY",
+                    practiceProblems: [
+                        {
+                            q: "Which of these is NOT important for understanding arc length?",
+                            as: ["The distance formula", "The idea of delta x", "Memorization", "Integrals"],
+                            a_correct: 3,
+                            expl: "Make sure to understand the formulas you're using!"
+                        }
+                    ]
                 }
             ]
         ]
